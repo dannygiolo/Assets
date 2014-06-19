@@ -1,0 +1,91 @@
+/*  =======================================================
+	
+		Table of content
+
+			* Imports
+
+			* Form
+	  
+	======================================================= */
+
+
+
+
+
+
+/*  =======================================================
+
+		Imports
+
+	=======================================================  */
+
+@import '../variables-layout';
+@import '../variables-skin';
+
+
+
+
+
+
+/*  ========================================================
+
+	  Reset
+
+	======================================================== */
+
+input,
+button,
+textarea {
+	border-width: 1px;
+	border-style: solid;
+	border-color: #999;
+	background: transparent;
+	padding: .3em;
+}
+
+button {
+	cursor: pointer;
+}
+
+fieldset {
+	padding: 1em;
+}
+
+legend {
+	padding: 0 .5em;
+}
+
+/* to be reviewd 
+.form--row {
+	margin-top: 1em;
+}
+
+.form--row:first-child {
+	margin-top: 0;
+}
+
+[class^="form--id"],
+[class^="form--pw"] {
+	display: inline-block;
+	background: green;
+}
+
+.form--id-label,
+.form--pw-label {
+	min-width: 5em;
+}
+
+.form--id-input,
+.form--pw-input {
+	min-width: 20em;
+}
+
+.form--textarea-label {
+	vertical-align: top;
+}
+
+.form--button-disabled {
+	opacity: 0.5;
+	cursor: default;
+}
+*/

@@ -24,7 +24,8 @@
 
 	=======================================================  */
 
-@import '../variables';
+@import '../variables-layout';
+@import '../variables-skin';
 
 
 
@@ -38,38 +39,38 @@
     =======================================================  */
 
 /* Horizontal */
-%horizontal-list li {
+%horizontal-list > li {
 	display: inline-block;
 }
 
 /* Last item right floated */
-%last-item-right-list li:last-child {
+%last-item-right-list > li:last-child {
 	float: right;
 }
 
 /* Breadcrumb */
-%breadcrumb-list li {
+%breadcrumb-list > li {
 	margin-left: .5em;
 }
 
-%breadcrumb-list li::before {
+%breadcrumb-list > li::before {
 	float: left;
 }
 
-%breadcrumb-list li:first-child {
+%breadcrumb-list > li:first-child {
 	margin-left: 0;
 }
 
-%breadcrumb-list li:first-child::before {
+%breadcrumb-list > li:first-child::before {
 	content: "//";
 }
 
-%breadcrumb-list li:nth-child(n+2)::before {
+%breadcrumb-list > li:nth-child(n+2)::before {
 	content: "/";
 }
 
 /* Dashboard */
-%dashboard-list li {
+%dashboard-list > li {
 	width: 32%;
 	height: 0;
 	padding-bottom: 50%;
@@ -78,6 +79,6 @@
 	background-color: red;
 }
 
-%dashboard-list li:nth-child(3n+1) {
+%dashboard-list > li:nth-child(3n+1) {
 	margin: 0;
 }

@@ -1,6 +1,8 @@
 /*  =======================================================
   
 		Table of content
+
+			* Typography
 	
 	======================================================= */
 
@@ -11,6 +13,27 @@
 
 /*  =======================================================
 
-
+		Typography
 
 	=======================================================  */
+
+/* Vertical ryhthm */
+/* Source: 
+	- http://www.smashingmagazine.com/2012/12/17/css-baseline-the-good-the-bad-and-the-ugly/
+	- http://24ways.org/2006/compose-to-a-vertical-rhythm/
+ */
+
+$font-size: 100%;
+
+$line-height: 1.4;
+
+$font-stacking: sans-serif;
+
+$typography-color: #111;
+
+$h1-font-size: 2.5em;
+$h2-font-size: 1.5em;
+$h3-font-size: 1.3125em;
+$h4-font-size: 1.125em;
+$h5-font-size: 1em;
+$h6-font-size: 1em;

@@ -36,11 +36,9 @@
 input,
 button,
 textarea {
-	border-width: 1px;
-	border-style: solid;
-	border-color: #999;
+	border: none;
 	background: transparent;
-	padding: .3em;
+	font-size: 1em;
 }
 
 button {

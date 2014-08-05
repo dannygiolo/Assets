@@ -3,6 +3,8 @@
 		Table of content
 
 			* Imports
+
+			* Common style
 	  
 	======================================================= */
 
@@ -17,9 +19,18 @@
 
 	=======================================================  */
 
-@import 'components/_helpers';
-@import 'components/_lists';
-@import 'components/_form-elements';
-@import 'components/_tables';
-@import 'components/_modals';
-@import 'components/_mixins';
+@import '_header';
+@import '_main-nav';
+@import '_footer';
+
+
+
+
+
+
+
+/*  =======================================================
+
+		Common style
+
+	=======================================================  */

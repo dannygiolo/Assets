@@ -1,5 +1,5 @@
 /*  =======================================================
-	
+
 		Table of content
 
 			* Z-index map
@@ -17,7 +17,7 @@
 
 			* Vertical centering
 			  - Position absolute
-	  
+
 	======================================================= */
 
 
@@ -32,11 +32,11 @@
 	=======================================================  */
 
 $zindex: (
-  modal     : 9000, 
-  overlay   : 8000,
-  dropdown  : 7000,
-  header    : 6000,
-  footer    : 5000
+	modal		: 9000,
+	overlay		: 8000,
+	dropdown	: 7000,
+	header		: 6000,
+	footer		: 5000
 );
 
 
@@ -51,17 +51,17 @@ $zindex: (
 	=======================================================  */
 
 .remove {
-  display: none !important;
+	display: none !important;
 }
 
 /* Accessible by screen reader */
 .hide {
-  position: absolute !important;
-  height: 0 !important;
-  padding: 0 !important;
-  margin: 0!important;
-  overflow: hidden !important;
-  border: none !important;
+	position: absolute !important;
+	height: 0 !important;
+	padding: 0 !important;
+	margin: 0!important;
+	overflow: hidden !important;
+	border: none !important;
 }
 
 
@@ -80,10 +80,10 @@ $zindex: (
 */
 
 .media-obj {
-  > img {
-	float: left;
-	height: auto;
-  }
+	> img {
+		float: left;
+		height: auto;
+	}
 }
 
 
@@ -95,17 +95,17 @@ $zindex: (
 
 		Clear fix
 
-	=======================================================  */   
+	=======================================================  */
 
 /* Sources: http://nicolasgallagher.com/micro-clearfix-hack/ */
-.clear-fix::before, 
+.clear-fix::before,
 .clear-fix::after {
 	content: ""; 
 	display: table;
 }
 
 .clear-fix::after {
-  clear: both;
+	clear: both;
 }
 
 
@@ -116,7 +116,7 @@ $zindex: (
 
 		Pseudo elements
 
-	=======================================================  */ 
+	=======================================================  */
 
 /* Psuedo elements */
 .pseudo-el::before,
@@ -133,7 +133,7 @@ $zindex: (
 
 /*  =======================================================
 
-		Proportional height to width ratio    
+		Proportional height to width ratio
 
 	=======================================================  */
 

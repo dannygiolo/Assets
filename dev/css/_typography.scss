@@ -47,7 +47,7 @@
 /* Confused on what to use between px, em and rem? */
 /* Read on: http://j.eremy.net/confused-about-rem-and-em/ */
 html {
-	font-size: $font-size; /* 100% = 1em = 16px */
+	font-size: $font-size;
 	line-height: $line-height;
 	font-family: $font-stacking;
 	color: $body-copy--color;

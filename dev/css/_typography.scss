@@ -60,8 +60,8 @@ html {
 		word-break: break-all;
 		word-break: break-word; /* non standard definition for webkit */
 
-  /* The Hyphenate-Before or -after sets a minimum number of characters before or after the hyphenation. 
-  /* And hyphenate-lines how many lines can be hyphenated in a row. */
+	/* The Hyphenate-Before or -after sets a minimum number of characters before or after the hyphenation. 
+	/* And hyphenate-lines how many lines can be hyphenated in a row. */
 	-webkit-hyphenate-before: 2;
 	 -webkit-hyphenate-after: 3;
 			 hyphenate-lines: 3;

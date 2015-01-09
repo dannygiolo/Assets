@@ -4,7 +4,7 @@
 
 			* Imports
 
-			* Mixins
+			* Viewport units
 	  
 	======================================================= */
 
@@ -29,6 +29,17 @@
 
 /*  =======================================================
 
-		Mixins
+		Viewport units
 
 	======================================================= */
+
+/* These mixins accept a unitless value */
+@mixin orientation-related-attribute($attribute, $value) {
+	@media (orientation: portrait) {
+		#{$attribute}: #{$value}vh;
+	}
+
+	@media (orientation: landscape) {
+		#{$attribute}: #{$value}vw;
+	}
+}

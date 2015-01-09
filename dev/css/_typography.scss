@@ -319,14 +319,14 @@ strong.font-400-italic {
 /* Source: http://trentwalton.com/2012/06/19/fluid-type/ */
 
 /* Tablets plus base desktops/laptops */
-@media (min-width : 30rem) and (max-width : 60rem) {
+@media (min-width : $mq-tablet__min) and (max-width : $mq-tablet__max) {
 	body {
 		font-size: 1.1em;
 	}
 }
 
 /* Desktops */
-@media (min-width : 60.0625rem) and (max-width : 80rem) {
+@media (min-width : $mq-desktop__min) and (max-width : $mq-desktop__max) {
 	body {
 		font-size: 1.25em;
 	}
@@ -334,7 +334,7 @@ strong.font-400-italic {
 
 
 /* Big screen monitors/TVs */
-@media (min-width : 80.0625rem) {
+@media (min-width : $mq-big-screen__min) {
 	body {
 		font-size: 1.5em;
 	}

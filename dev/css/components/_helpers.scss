@@ -14,10 +14,7 @@
 
 			* Proportional height to width ratio
 			  - Padding (FitVideo.js like)
-
-			* Vertical centering
-			  - Position absolute
-
+			  
 	======================================================= */
 
 
@@ -51,12 +48,12 @@ $zindex: (
 
 	=======================================================  */
 
-.remove {
+%remove {
 	display: none !important;
 }
 
 /* Accessible by screen reader */
-.hide {
+%hide {
 	position: absolute !important;
 	height: 0 !important;
 	padding: 0 !important;
@@ -80,7 +77,7 @@ $zindex: (
 	- http://philipwalton.github.io/solved-by-flexbox/demos/media-object/
 */
 
-.media-obj {
+%media-obj {
 	> img {
 		float: left;
 		height: auto;
@@ -99,13 +96,13 @@ $zindex: (
 	=======================================================  */
 
 /* Sources: http://nicolasgallagher.com/micro-clearfix-hack/ */
-.clear-fix::before,
-.clear-fix::after {
+%clear-fix::before,
+%clear-fix::after {
 	content: ""; 
 	display: table;
 }
 
-.clear-fix::after {
+%clear-fix::after {
 	clear: both;
 }
 
@@ -120,8 +117,8 @@ $zindex: (
 	=======================================================  */
 
 /* Psuedo elements */
-.pseudo-el::before,
-.psuedo-el::after {
+%pseudo-el::before,
+%psuedo-el::after {
 	-webkit-box-sizing: inherit;
 	   -moz-box-sizing: inherit;
 			box-sizing: inherit;
@@ -145,17 +142,17 @@ $zindex: (
 
 /*  Demo: http://codepen.io/dannygiolo/pen/awEjq */
 
-.proportional-ratio {
+%proportional-ratio {
 	position: relative;
 	width: 50%; /* desired width of .proportional-ratio__content */
 }
 
-.proportional-ratio::before {
+%proportional-ratio::before {
 	content: "";
 	display: block;
 }
 
-.proportional-ratio .proportional-ratio__content {
+%proportional-ratio %proportional-ratio__content {
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -164,50 +161,22 @@ $zindex: (
 }
 
 /* Common ratios options */
-.proportional-ratio-1-1::before {
+%proportional-ratio-1-1::before {
 	padding-top: 100%;
 }
 
-.proportional-ratio-2-1::before {
+%proportional-ratio-2-1::before {
 	padding-top: 50%;
 }
 
-.proportional-ratio-1-2::before {
+%proportional-ratio-1-2::before {
 	padding-top: 200%;
 }
 
-.proportional-ratio-4-3::before {
+%proportional-ratio-4-3::before {
 	padding-top: 75%;
 }
 
-.proportional-ratio-16-9::before {
+%proportional-ratio-16-9::before {
 	padding-top: 56.25%;
-}
-
-
-
-
-
-/*  =======================================================
-
-		Vertical centering
-
-	=======================================================  */
-
-/*  Source:
-		- http://coding.smashingmagazine.com/2013/08/09/absolute-horizontal-vertical-centering-css/
-		- http://www.vanseodesign.com/css/vertical-centering/
-*/
- 
-/*  Demo: http://codepen.io/dannygiolo/pen/hqGsx */
-
-.vertically-centered {
-	position: absolute;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	margin: auto; /* For the actual centering */
-	height: 10em; /* Dimension required */
-	width: 10em; /* Dimension required */
 }

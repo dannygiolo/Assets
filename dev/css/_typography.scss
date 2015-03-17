@@ -350,18 +350,15 @@ strong.font-400-italic {
 
 ============================================================ */
 
-/* Based on font-face declaration blockquote pseudo element may need a different declaration (see above) */
-blockquote::before,
-blockquote::after {
-	font-style: bold;
-}
+q {
+	display: inline-block;
+	position: relative;
+	padding: 1.5em;
 
-blockquote::before {
-	content: "\201C";
-}
-
-blockquote::after {
-	content: "\201D";
+	&::before,
+	&::after {
+		padding: .3em;
+	}
 }
 
 /* Quotes internationalization */
@@ -449,10 +446,6 @@ blockquote::after {
 	quotes: '\00AB' '\00BB' '\2039' '\203A';
 }
 
-/* Russian quote internationalization break the css */
-/* I have no idea why, need investigation */
-/*
-:lang(ru){
-	quotes: '\00AB' '\00BB' '\201E' '\201C';
-}​
-*/
+:lang(ru) {
+    quotes: '\00AB' '\00BB' '\201E' '\201C';
+}

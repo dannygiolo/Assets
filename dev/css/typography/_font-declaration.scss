@@ -1,0 +1,102 @@
+/*  =======================================================
+
+		Table of content
+
+			* Imports
+
+			* Font declaration
+				- Base
+				- Size
+				- Color
+
+	======================================================= */
+
+
+
+
+
+/*  =======================================================
+
+		Imports
+
+	=======================================================  */
+
+@import '../variables/variables-skin';
+
+
+
+
+
+
+/*  =======================================================
+
+		Font declaration
+
+	=======================================================  */
+
+/* Base */
+/* Confused on what to use between px, em and rem? */
+/* Read on: http://j.eremy.net/confused-about-rem-and-em/ */
+html {
+	font-size: $font-size;
+	line-height: $line-height;
+	font-family: $font-stacking;
+	color: $body-copy--color;
+
+	-webkit-hyphens: auto;
+	   -moz-hyphens: auto;
+			hyphens: auto;
+
+	-ms-word-break: break-all;
+		word-break: break-all;
+		word-break: break-word; /* non standard definition for webkit */
+
+	/* The Hyphenate-Before or -after sets a minimum number of characters before or after the hyphenation.
+	/* And hyphenate-lines how many lines can be hyphenated in a row. */
+	-webkit-hyphenate-before: 2;
+	 -webkit-hyphenate-after: 3;
+			 hyphenate-lines: 3;
+}
+
+/* Size */
+h1 {
+	font-size: $h1--font-size;
+}
+
+h2 {
+	font-size: $h2--font-size;
+}
+
+h3 {
+	font-size: $h3--font-size;
+}
+
+h4 {
+	font-size: $h4--font-size;
+}
+
+h5 {
+	font-size: $h5--font-size;
+}
+
+h6 {
+	font-size: $h6--font-size;
+}
+
+p {
+	font-size: $p--font-size;
+}
+
+q {
+	font-size: $p--font-size;
+}
+
+/* Color */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: $body-copy--color;
+}

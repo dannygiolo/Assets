@@ -1,0 +1,1342 @@
+/*  =======================================================
+
+		Table of content
+
+			* Imports
+
+			* Dev
+
+	======================================================= */
+/*  =======================================================
+
+		Imports
+
+	=======================================================  */
+/*  =======================================================
+
+		Table of Content
+
+		* Media queries
+
+	======================================================= */
+/*  =======================================================
+
+		Media queries
+
+	======================================================= */
+/* 480px */
+/* 960px */
+/* 961px */
+/* 1280px */
+/* 1281px */
+/*  =======================================================
+
+		Table of Content
+
+			* Typography
+
+	======================================================= */
+/*  =======================================================
+
+		Typography
+
+	=======================================================  */
+/* Vertical ryhthm */
+/* Source: 
+	- http://www.smashingmagazine.com/2012/12/17/css-baseline-the-good-the-bad-and-the-ugly/
+	- http://24ways.org/2006/compose-to-a-vertical-rhythm/
+ */
+/* 62.5% = 1em = 10px */
+/*  =======================================================
+
+		Table of content
+
+			* Imports
+
+	======================================================= */
+/*  =======================================================
+
+		Imports
+
+	=======================================================  */
+/*  =======================================================
+	
+		Table of content
+
+			* Starter
+				- New box model
+				- Resetting
+				- Normalizing		
+	  
+	======================================================= */
+/*  =======================================================
+
+		Starter
+
+	=======================================================  */
+/* New box model */
+/* Source: http://www.paulirish.com/2012/box-sizing-border-box-ftw/ */
+/* http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+html {
+  box-sizing: border-box; }
+
+* {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit; }
+
+/* Resetting */
+/* Feel free to add any other elements you may need */
+/* Source: http://meyerweb.com/eric/tools/css/reset/ */
+html,
+body,
+ul,
+li,
+ol,
+fieldset,
+input,
+button,
+figure {
+  margin: 0;
+  padding: 0; }
+
+li {
+  list-style-type: none; }
+
+input,
+button,
+textarea,
+select {
+  border: none;
+  background: transparent;
+  font-size: 1em; }
+
+button,
+select {
+  cursor: pointer; }
+
+/* Normalizing */
+a {
+  text-decoration: none; }
+
+:focus,
+:active {
+  outline: none;
+  /* Make sure to style those somewhere else */ }
+
+img {
+  border: none;
+  max-width: 100%; }
+
+abbr,
+acronym {
+  border-bottom-width: 1px;
+  border-bottom-style: dotted; }
+
+/*  =======================================================
+
+		Table of content
+
+			* Imports
+
+	======================================================= */
+/*  =======================================================
+
+		Imports
+
+	=======================================================  */
+/*  =======================================================
+
+		Table of Content
+
+		* Media queries
+
+	======================================================= */
+/*  =======================================================
+
+		Media queries
+
+	======================================================= */
+/* 480px */
+/* 960px */
+/* 961px */
+/* 1280px */
+/* 1281px */
+/*  =======================================================
+
+		Table of content
+
+			* Imports
+
+	======================================================= */
+/*  =======================================================
+
+		Imports
+
+	=======================================================  */
+/*  =======================================================
+
+		Table of content
+
+			* Imports
+
+			* Font declaration
+				- Base
+				- Size
+				- Color
+
+	======================================================= */
+/*  =======================================================
+
+		Imports
+
+	=======================================================  */
+/*  =======================================================
+
+		Table of Content
+
+			* Typography
+
+	======================================================= */
+/*  =======================================================
+
+		Typography
+
+	=======================================================  */
+/* Vertical ryhthm */
+/* Source: 
+	- http://www.smashingmagazine.com/2012/12/17/css-baseline-the-good-the-bad-and-the-ugly/
+	- http://24ways.org/2006/compose-to-a-vertical-rhythm/
+ */
+/* 62.5% = 1em = 10px */
+/*  =======================================================
+
+		Font declaration
+
+	=======================================================  */
+/* Base */
+/* Confused on what to use between px, em and rem? */
+/* Read on: http://j.eremy.net/confused-about-rem-and-em/ */
+html {
+  font-size: 62.5%;
+  line-height: 1.4;
+  font-family: sans-serif;
+  color: #111;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  hyphens: auto;
+  -ms-word-break: break-all;
+  word-break: break-all;
+  word-break: break-word;
+  /* non standard definition for webkit */
+  /* The Hyphenate-Before or -after sets a minimum number of characters before or after the hyphenation.
+  /* And hyphenate-lines how many lines can be hyphenated in a row. */
+  -webkit-hyphenate-before: 2;
+  -webkit-hyphenate-after: 3;
+  hyphenate-lines: 3; }
+
+/* Size */
+h1 {
+  font-size: 2.5em; }
+
+h2 {
+  font-size: 1.5em; }
+
+h3 {
+  font-size: 1.3125em; }
+
+h4 {
+  font-size: 1.125em; }
+
+h5 {
+  font-size: 1em; }
+
+h6 {
+  font-size: 1em; }
+
+p {
+  font-size: 1em; }
+
+q {
+  font-size: 1em; }
+
+/* Color */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #111; }
+
+/*  =======================================================
+
+		Table of content
+
+			* Imports
+			
+			* @Font-face with style linking
+				- Brief
+				- Drawbacks
+
+	======================================================= */
+/*  =======================================================
+
+		Imports
+
+	=======================================================  */
+/*  =======================================================
+
+		Table of Content
+
+			* Typography
+
+	======================================================= */
+/*  =======================================================
+
+		Typography
+
+	=======================================================  */
+/* Vertical ryhthm */
+/* Source: 
+	- http://www.smashingmagazine.com/2012/12/17/css-baseline-the-good-the-bad-and-the-ugly/
+	- http://24ways.org/2006/compose-to-a-vertical-rhythm/
+ */
+/* 62.5% = 1em = 10px */
+/*  =======================================================
+
+		@Font-face with style linking
+
+	=======================================================  */
+/*  Brief 
+		This technique consists in giving the the same font-family name multiple times,
+		setting the weights and styles in each @font-face declaration to match the weight
+		and style of the Web font file being accessed.
+*/
+/*	Drawbacks
+		- crashes iPad1 and BlackBerry 9900
+		- compatible up to IE7
+		- if you use more than four weights and styles on the website, 
+			IE 7 and 8 will convert all light and medium weights to normal,
+			and all black and heavy weights to bold.
+*/
+/*  Sources 
+	  - http://coding.smashingmagazine.com/2013/02/14/setting-weights-and-styles-at-font-face-declaration/
+*/
+@font-face {
+  font-family: 'Webfont';
+  src: url("webfont-light.eot");
+  src: url("webfont-light.eot?#iefix") format("embedded-opentype"), url("webfont-light.woff") format("woff"), url("webfont-light.ttf") format("truetype"), url("webfont-light.svg#WebfontLight") format("svg");
+  font-weight: 300;
+  font-style: normal; }
+@font-face {
+  font-family: 'Webfont';
+  src: url("webfont-light-italic.eot");
+  src: url("webfont-light-italic.eot?#iefix") format("embedded-opentype"), url("webfont-light-italic.woff") format("woff"), url("webfont-light-italic.ttf") format("truetype"), url("webfont-light-italic.svg#WebfontLightItalic") format("svg");
+  font-weight: 300;
+  font-style: italic; }
+@font-face {
+  font-family: 'Webfont';
+  src: url("webfont-regular.eot");
+  src: url("webfont-regular.eot?#iefix") format("embedded-opentype"), url("webfont-regular.woff") format("woff"), url("webfont-regular.ttf") format("truetype"), url("webfont-regular.svg#WebfontRegular") format("svg");
+  font-weight: 400;
+  font-style: normal; }
+@font-face {
+  font-family: 'Webfont';
+  src: url("webfont-bold.eot");
+  src: url("webfont-bold.eot?#iefix") format("embedded-opentype"), url("webfont-bold.woff") format("woff"), url("webfont-bold.ttf") format("truetype"), url("webfont-bold.svg#WebfontBold") format("svg");
+  font-weight: 700;
+  font-style: normal; }
+/* Additional classes for style linking */
+.font-300 {
+  font-family: 'Webfont', arial, sans-serif;
+  font-weight: 300;
+  font-style: normal; }
+
+.font-300-italic {
+  font-family: 'Webfont', arial, sans-serif;
+  font-weight: 300;
+  font-style: italic; }
+
+.font-400 {
+  font-family: 'Webfont', arial, sans-serif;
+  font-weight: 400;
+  font-style: normal; }
+
+.font-700 {
+  font-family: 'Webfont', arial, sans-serif;
+  font-weight: 700;
+  font-style: normal; }
+
+/*  =======================================================
+
+		Table of content
+
+			* Imports
+
+			* Font-size increments
+
+	======================================================= */
+/*  =======================================================
+
+		Imports
+
+	=======================================================  */
+/*  =======================================================
+
+		Table of Content
+
+			* Typography
+
+	======================================================= */
+/*  =======================================================
+
+		Typography
+
+	=======================================================  */
+/* Vertical ryhthm */
+/* Source: 
+	- http://www.smashingmagazine.com/2012/12/17/css-baseline-the-good-the-bad-and-the-ugly/
+	- http://24ways.org/2006/compose-to-a-vertical-rhythm/
+ */
+/* 62.5% = 1em = 10px */
+/*  =======================================================
+
+		Font-size increments  
+
+	=======================================================  */
+/* Typography increment to keep the best word per line ratio */
+/* Source: http://trentwalton.com/2012/06/19/fluid-type/ */
+/* Tablets plus base desktops/laptops */
+@media (min-width: 30rem) and (max-width: 60rem) {
+  body {
+    font-size: 1.1em; } }
+/* Desktops */
+@media (min-width: 60.0625rem) and (max-width: 80rem) {
+  body {
+    font-size: 1.25em; } }
+/* Big screen monitors/TVs */
+@media (min-width: 80.0625rem) {
+  body {
+    font-size: 1.5em; } }
+/*  =======================================================
+
+		Table of content
+
+			* Imports
+
+	======================================================= */
+/*  =======================================================
+
+		Imports
+
+	=======================================================  */
+/*  =======================================================
+
+		Table of Content
+
+			* Typography
+
+	======================================================= */
+/*  =======================================================
+
+		Typography
+
+	=======================================================  */
+/* Vertical ryhthm */
+/* Source: 
+	- http://www.smashingmagazine.com/2012/12/17/css-baseline-the-good-the-bad-and-the-ugly/
+	- http://24ways.org/2006/compose-to-a-vertical-rhythm/
+ */
+/* 62.5% = 1em = 10px */
+/* ============================================================
+
+   Typographically correct quotes
+
+============================================================ */
+.quote-highlight {
+  display: inline-block;
+  position: relative;
+  padding: 1.5em; }
+  .quote-highlight::before, .quote-highlight::after {
+    padding: .3em; }
+
+/* Quotes internationalization */
+:lang(af) q {
+  quotes: '\201E' '\201D' '\201A' '\2019'; }
+
+:lang(bg) q {
+  quotes: '\201E' '\201C' '\201A' '\2018'; }
+
+:lang(cs) q {
+  quotes: '\201E' '\201C' '\201A' '\2018'; }
+
+:lang(da) q {
+  quotes: '\00BB' '\00AB' '\203A' '\2039'; }
+
+:lang(de) q {
+  quotes: '\201E' '\201C' '\201A' '\2018'; }
+
+:lang(el) q {
+  quotes: '\00AB' '\00BB' '\2039' '\203A'; }
+
+:lang(en- qGB) {
+  quotes: '\2018' '\2019' '\201C' '\201D'; }
+
+:lang(es) q {
+  quotes: '\00AB' '\00BB' '\2039' '\203A'; }
+
+:lang(fi) q {
+  quotes: '\201D' '\201D' '\2019' '\2019'; }
+
+:lang(fr) q {
+  quotes: '\ab\2005' '\2005\bb' '\2039\2005' '\2005\203a'; }
+
+:lang(hr) q {
+  quotes: '\00BB' '\00AB' '\203A' '\2039'; }
+
+:lang(is) q {
+  quotes: '\201E' '\201C' '\201A' '\2018'; }
+
+:lang(lt) q {
+  quotes: '\201E' '\201C' '\201A' '\2018'; }
+
+:lang(nl) q {
+  quotes: '\201E' '\201D' '\201A' '\2019'; }
+
+:lang(pl) q {
+  quotes: '\201E' '\201D' '\201A' '\2019'; }
+
+:lang(ro) q {
+  quotes: '\201E' '\201C' '\201A' '\2018'; }
+
+:lang(sk) q {
+  quotes: '\201E' '\201C' '\201A' '\2018'; }
+
+:lang(sq) q {
+  quotes: '\00AB' '\00BB' '\2039' '\203A'; }
+
+:lang(sr) q {
+  quotes: '\201E' '\201C' '\201A' '\2018'; }
+
+:lang(sv) q {
+  quotes: '\201D' '\201D' '\2019' '\2019'; }
+
+:lang(tr) q {
+  quotes: '\00AB' '\00BB' '\2039' '\203A'; }
+
+:lang(ru) q {
+  quotes: '\00AB' '\00BB' '\201E' '\201C'; }
+
+/*  =======================================================
+
+		Table of content
+
+			* Imports
+
+	======================================================= */
+/*  =======================================================
+
+		Imports
+
+	=======================================================  */
+/*  =======================================================
+
+		Table of content
+
+			* Z-index map
+
+			* Hiding classes
+
+			* Media object
+
+			* Clear fix
+
+			* Pseudo elements
+
+			* Proportional height to width ratio
+			  - Padding (FitVideo.js like)
+			  
+	======================================================= */
+/*  =======================================================
+
+		Z-index map
+
+	=======================================================  */
+/* Source: http://css-tricks.com/handling-z-index/ */
+/*  =======================================================
+
+		Hiding classes
+
+	=======================================================  */
+/* Accessible by screen reader */
+/*  =======================================================
+
+		Media Object	  
+
+	=======================================================  */
+/* Sources 
+	- http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code/
+	- http://philipwalton.github.io/solved-by-flexbox/demos/media-object/
+*/
+/*  =======================================================
+
+		Clear fix
+
+	=======================================================  */
+/* Sources: http://nicolasgallagher.com/micro-clearfix-hack/ */
+/*  =======================================================
+
+		Pseudo elements
+
+	=======================================================  */
+/* Psuedo elements */
+/*  =======================================================
+
+		Proportional height to width ratio
+
+	=======================================================  */
+/* Sources:
+	- http://www.mademyday.de/css-height-equals-width-with-pure-css.html
+	- http://alistapart.com/article/creating-intrinsic-ratios-for-video
+*/
+/*  Demo: http://codepen.io/dannygiolo/pen/awEjq */
+/* Common ratios options */
+/*  =======================================================
+
+		Table of Content
+
+			* Imports
+
+	    	* Lists
+	    		- Default
+	    		- Horizontal
+	    		- Last item right floated
+	    		- Breadcrumbs
+	    		- Dashboard
+
+	======================================================= */
+/*  =======================================================
+
+		Imports
+
+	=======================================================  */
+/*  =======================================================
+
+		Table of Content
+
+		* Media queries
+
+	======================================================= */
+/*  =======================================================
+
+		Media queries
+
+	======================================================= */
+/* 480px */
+/* 960px */
+/* 961px */
+/* 1280px */
+/* 1281px */
+/*  =======================================================
+
+		Table of Content
+
+			* Typography
+
+	======================================================= */
+/*  =======================================================
+
+		Typography
+
+	=======================================================  */
+/* Vertical ryhthm */
+/* Source: 
+	- http://www.smashingmagazine.com/2012/12/17/css-baseline-the-good-the-bad-and-the-ugly/
+	- http://24ways.org/2006/compose-to-a-vertical-rhythm/
+ */
+/* 62.5% = 1em = 10px */
+/*  ========================================================
+
+		Lists
+
+	=======================================================  */
+/* Horizontal */
+/* Last item right floated */
+/* Breadcrumb */
+/* Dashboard */
+/*  =======================================================
+
+		Table of content
+
+			* Imports
+
+			* Form
+
+	======================================================= */
+/*  =======================================================
+
+		Imports
+
+	=======================================================  */
+/*  =======================================================
+
+		Table of Content
+
+		* Media queries
+
+	======================================================= */
+/*  =======================================================
+
+		Media queries
+
+	======================================================= */
+/* 480px */
+/* 960px */
+/* 961px */
+/* 1280px */
+/* 1281px */
+/*  =======================================================
+
+		Table of Content
+
+			* Typography
+
+	======================================================= */
+/*  =======================================================
+
+		Typography
+
+	=======================================================  */
+/* Vertical ryhthm */
+/* Source: 
+	- http://www.smashingmagazine.com/2012/12/17/css-baseline-the-good-the-bad-and-the-ugly/
+	- http://24ways.org/2006/compose-to-a-vertical-rhythm/
+ */
+/* 62.5% = 1em = 10px */
+/*  ========================================================
+
+		Reset
+
+	======================================================== */
+/* to be reviewd
+fieldset {
+	padding: 1em;
+}
+
+legend {
+	padding: 0 .5em;
+}
+ 
+.form--row {
+	margin-top: 1em;
+}
+
+.form--row:first-child {
+	margin-top: 0;
+}
+
+[class^="form--id"],
+[class^="form--pw"] {
+	display: inline-block;
+	background: green;
+}
+
+.form--id-label,
+.form--pw-label {
+	min-width: 5em;
+}
+
+.form--id-input,
+.form--pw-input {
+	min-width: 20em;
+}
+
+.form--textarea-label {
+	vertical-align: top;
+}
+
+.form--button-disabled {
+	opacity: 0.5;
+	cursor: default;
+}
+*/
+/*  =======================================================
+
+		Table of content
+
+			* Imports
+
+			* Tables
+
+	======================================================= */
+/*  =======================================================
+
+		Imports
+
+	=======================================================  */
+/*  =======================================================
+
+		Table of Content
+
+		* Media queries
+
+	======================================================= */
+/*  =======================================================
+
+		Media queries
+
+	======================================================= */
+/* 480px */
+/* 960px */
+/* 961px */
+/* 1280px */
+/* 1281px */
+/*  =======================================================
+
+		Table of Content
+
+			* Typography
+
+	======================================================= */
+/*  =======================================================
+
+		Typography
+
+	=======================================================  */
+/* Vertical ryhthm */
+/* Source: 
+	- http://www.smashingmagazine.com/2012/12/17/css-baseline-the-good-the-bad-and-the-ugly/
+	- http://24ways.org/2006/compose-to-a-vertical-rhythm/
+ */
+/* 62.5% = 1em = 10px */
+/*  ========================================================
+
+		Tables
+
+	=======================================================  */
+table {
+  width: 100%;
+  border-spacing: 0;
+  border-collapse: collapse;
+  margin-top: 1em; }
+
+table:first-child {
+  margin-top: 0; }
+
+td,
+th {
+  border-width: 1px;
+  border-style: solid;
+  border-color: #111; }
+
+/*  =======================================================
+
+		Table of content
+
+			* Imports
+
+			* Modals
+
+	======================================================= */
+/*  =======================================================
+
+		Imports
+
+	=======================================================  */
+/*  =======================================================
+
+		Table of Content
+
+		* Media queries
+
+	======================================================= */
+/*  =======================================================
+
+		Media queries
+
+	======================================================= */
+/* 480px */
+/* 960px */
+/* 961px */
+/* 1280px */
+/* 1281px */
+/*  =======================================================
+
+		Table of Content
+
+			* Typography
+
+	======================================================= */
+/*  =======================================================
+
+		Typography
+
+	=======================================================  */
+/* Vertical ryhthm */
+/* Source: 
+	- http://www.smashingmagazine.com/2012/12/17/css-baseline-the-good-the-bad-and-the-ugly/
+	- http://24ways.org/2006/compose-to-a-vertical-rhythm/
+ */
+/* 62.5% = 1em = 10px */
+/*  ========================================================
+
+		Modals
+
+	=======================================================  */
+/* to be reviewd 
+.modal-win {
+	position: fixed;
+	width: 30em;
+	height: 30em;
+	top: -50%;
+	left: 50%;
+	margin: -15em 0 0 -15em;
+	background-color: #fff;
+	z-index: 10;
+}
+*/
+/*  =======================================================
+	
+		Table of content
+
+			* Imports
+
+			* Viewport units
+	  
+	======================================================= */
+/*  =======================================================
+
+		Imports
+
+	=======================================================  */
+/*  =======================================================
+
+		Table of Content
+
+		* Media queries
+
+	======================================================= */
+/*  =======================================================
+
+		Media queries
+
+	======================================================= */
+/* 480px */
+/* 960px */
+/* 961px */
+/* 1280px */
+/* 1281px */
+/*  =======================================================
+
+		Table of Content
+
+			* Typography
+
+	======================================================= */
+/*  =======================================================
+
+		Typography
+
+	=======================================================  */
+/* Vertical ryhthm */
+/* Source: 
+	- http://www.smashingmagazine.com/2012/12/17/css-baseline-the-good-the-bad-and-the-ugly/
+	- http://24ways.org/2006/compose-to-a-vertical-rhythm/
+ */
+/* 62.5% = 1em = 10px */
+/*  =======================================================
+
+		Viewport units
+
+	======================================================= */
+/* These mixins accept a unitless value */
+/*  =======================================================
+
+		Table of content
+
+			* Imports
+
+			* Includes common
+
+	======================================================= */
+/*  =======================================================
+
+		Imports
+
+	=======================================================  */
+/*  =======================================================
+
+		Table of content
+
+			* Imports
+
+			* Header
+
+	======================================================= */
+/*  =======================================================
+
+		Imports
+
+	=======================================================  */
+/*  =======================================================
+
+		Table of Content
+
+		* Media queries
+
+	======================================================= */
+/*  =======================================================
+
+		Media queries
+
+	======================================================= */
+/* 480px */
+/* 960px */
+/* 961px */
+/* 1280px */
+/* 1281px */
+/*  =======================================================
+
+		Table of Content
+
+			* Typography
+
+	======================================================= */
+/*  =======================================================
+
+		Typography
+
+	=======================================================  */
+/* Vertical ryhthm */
+/* Source: 
+	- http://www.smashingmagazine.com/2012/12/17/css-baseline-the-good-the-bad-and-the-ugly/
+	- http://24ways.org/2006/compose-to-a-vertical-rhythm/
+ */
+/* 62.5% = 1em = 10px */
+/*  =======================================================
+
+		Header
+
+	=======================================================  */
+/*  =======================================================
+
+		Table of content
+
+			* Imports
+
+			* Main nav
+
+	======================================================= */
+/*  =======================================================
+
+		Imports
+
+	=======================================================  */
+/*  =======================================================
+
+		Table of Content
+
+		* Media queries
+
+	======================================================= */
+/*  =======================================================
+
+		Media queries
+
+	======================================================= */
+/* 480px */
+/* 960px */
+/* 961px */
+/* 1280px */
+/* 1281px */
+/*  =======================================================
+
+		Table of Content
+
+			* Typography
+
+	======================================================= */
+/*  =======================================================
+
+		Typography
+
+	=======================================================  */
+/* Vertical ryhthm */
+/* Source: 
+	- http://www.smashingmagazine.com/2012/12/17/css-baseline-the-good-the-bad-and-the-ugly/
+	- http://24ways.org/2006/compose-to-a-vertical-rhythm/
+ */
+/* 62.5% = 1em = 10px */
+/*  =======================================================
+
+		Main nav
+
+	=======================================================  */
+/*  =======================================================
+
+		Table of content
+
+			* Imports
+
+			* Footer
+
+	======================================================= */
+/*  =======================================================
+
+		Imports
+
+	=======================================================  */
+/*  =======================================================
+
+		Table of Content
+
+		* Media queries
+
+	======================================================= */
+/*  =======================================================
+
+		Media queries
+
+	======================================================= */
+/* 480px */
+/* 960px */
+/* 961px */
+/* 1280px */
+/* 1281px */
+/*  =======================================================
+
+		Table of Content
+
+			* Typography
+
+	======================================================= */
+/*  =======================================================
+
+		Typography
+
+	=======================================================  */
+/* Vertical ryhthm */
+/* Source: 
+	- http://www.smashingmagazine.com/2012/12/17/css-baseline-the-good-the-bad-and-the-ugly/
+	- http://24ways.org/2006/compose-to-a-vertical-rhythm/
+ */
+/* 62.5% = 1em = 10px */
+/*  =======================================================
+
+		Footer
+
+	=======================================================  */
+/*  =======================================================
+
+		Includes common
+
+	=======================================================  */
+/*  =======================================================
+
+		Table of content
+
+			* Imports
+
+			* Sections common
+
+	======================================================= */
+/*  =======================================================
+
+		Imports
+
+	=======================================================  */
+/*  =======================================================
+
+		Table of content
+
+			* Imports
+
+			* Home
+
+	======================================================= */
+/*  =======================================================
+
+		Imports
+
+	=======================================================  */
+/*  =======================================================
+
+		Table of Content
+
+		* Media queries
+
+	======================================================= */
+/*  =======================================================
+
+		Media queries
+
+	======================================================= */
+/* 480px */
+/* 960px */
+/* 961px */
+/* 1280px */
+/* 1281px */
+/*  =======================================================
+
+		Table of Content
+
+			* Typography
+
+	======================================================= */
+/*  =======================================================
+
+		Typography
+
+	=======================================================  */
+/* Vertical ryhthm */
+/* Source: 
+	- http://www.smashingmagazine.com/2012/12/17/css-baseline-the-good-the-bad-and-the-ugly/
+	- http://24ways.org/2006/compose-to-a-vertical-rhythm/
+ */
+/* 62.5% = 1em = 10px */
+/*  =======================================================
+
+		Home
+
+	=======================================================  */
+/*  =======================================================
+
+		Sections common
+
+	=======================================================  */
+/*  =======================================================
+
+		Table of content
+
+			* Imports
+
+			* Skin common
+
+	======================================================= */
+/*  =======================================================
+
+		Imports
+
+	=======================================================  */
+/*  =======================================================
+
+		Table of content
+
+			* Imports
+
+	  		* Matrix
+
+	  		* Sprite
+
+			* Icons position
+
+	======================================================= */
+/*  =======================================================
+
+		Imports
+
+	======================================================= */
+/*  =======================================================
+
+		Table of Content
+
+		* Media queries
+
+	======================================================= */
+/*  =======================================================
+
+		Media queries
+
+	======================================================= */
+/* 480px */
+/* 960px */
+/* 961px */
+/* 1280px */
+/* 1281px */
+/*  =======================================================
+
+		Table of Content
+
+			* Typography
+
+	======================================================= */
+/*  =======================================================
+
+		Typography
+
+	=======================================================  */
+/* Vertical ryhthm */
+/* Source: 
+	- http://www.smashingmagazine.com/2012/12/17/css-baseline-the-good-the-bad-and-the-ugly/
+	- http://24ways.org/2006/compose-to-a-vertical-rhythm/
+ */
+/* 62.5% = 1em = 10px */
+/*  =======================================================
+
+		Matrix
+
+	======================================================= */
+/*  =======================================================
+
+		Sprite
+
+	======================================================= */
+/* Common style for all versions */
+.icon::before {
+  content: "";
+  background-image: url("../img/icons/sprite.svg");
+  background-repeat: no-repeat; }
+
+/*  =======================================================
+
+		Icons position
+
+	======================================================= */
+/*  =======================================================
+
+		Table of content
+
+			* Imports
+
+	======================================================= */
+/*  =======================================================
+
+		Imports
+
+	=======================================================  */
+/*  =======================================================
+
+		Table of Content
+
+			* Typography
+
+	======================================================= */
+/*  =======================================================
+
+		Typography
+
+	=======================================================  */
+/* Vertical ryhthm */
+/* Source: 
+	- http://www.smashingmagazine.com/2012/12/17/css-baseline-the-good-the-bad-and-the-ugly/
+	- http://24ways.org/2006/compose-to-a-vertical-rhythm/
+ */
+/* 62.5% = 1em = 10px */
+/*  =======================================================
+
+		Table of Content
+
+	======================================================= */
+/*  =======================================================
+
+		Skin common
+
+	=======================================================  */
+/*  =======================================================
+
+		Dev style
+
+	=======================================================  */
+* {
+  -webkit-transition: all .3s ease-in-out; }

@@ -1,0 +1,57 @@
+/*  =======================================================
+
+		Table of content
+
+			* Imports
+
+			* Font-size increments
+
+	======================================================= */
+
+
+
+
+
+/*  =======================================================
+
+		Imports
+
+	=======================================================  */
+
+@import '../variables/variables-skin';
+
+
+
+
+
+
+/*  =======================================================
+
+		Font-size increments  
+
+	=======================================================  */
+
+/* Typography increment to keep the best word per line ratio */
+/* Source: http://trentwalton.com/2012/06/19/fluid-type/ */
+
+/* Tablets plus base desktops/laptops */
+@media (min-width : $mq-tablet__min) and (max-width : $mq-tablet__max) {
+	body {
+		font-size: 1.1em;
+	}
+}
+
+/* Desktops */
+@media (min-width : $mq-desktop__min) and (max-width : $mq-desktop__max) {
+	body {
+		font-size: 1.25em;
+	}
+}
+
+
+/* Big screen monitors/TVs */
+@media (min-width : $mq-big-screen__min) {
+	body {
+		font-size: 1.5em;
+	}
+}

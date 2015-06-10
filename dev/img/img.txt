@@ -1,1 +1,2 @@
-img placeholder - to be deleted
+Temporary only images repository.
+If images are ready for production move it to the production folder.

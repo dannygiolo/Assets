@@ -19,16 +19,14 @@
 
 	=======================================================  */
 
-@import '_variables-layout';
-@import '_variables-skin';
-@import '_starter';
-@import '_typography';
-@import '_icons';
-@import '_layout';
+@import 'variables/_variables-layout';
+@import 'variables/_variables-skin';
+@import 'scaffolding/_scaffolding';
+@import 'typography/_typography';
 @import 'components/_components';
 @import 'includes/_includes';
 @import 'sections/_sections';
-@import '_skin';
+@import 'skin/_skin';
 
 
 

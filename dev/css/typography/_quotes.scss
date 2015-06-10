@@ -1,0 +1,130 @@
+/*  =======================================================
+
+		Table of content
+
+			* Imports
+
+	======================================================= */
+
+
+
+
+
+/*  =======================================================
+
+		Imports
+
+	=======================================================  */
+
+@import '../variables/variables-skin';
+
+
+
+
+
+
+/* ============================================================
+
+   Typographically correct quotes
+
+============================================================ */
+
+.quote-highlight {
+	display: inline-block;
+	position: relative;
+	padding: 1.5em;
+
+	&::before,
+	&::after {
+		padding: .3em;
+	}
+}
+
+/* Quotes internationalization */
+:lang(af) q {
+	quotes: '\201E' '\201D' '\201A' '\2019';
+}
+
+:lang(bg) q {
+	quotes: '\201E' '\201C' '\201A' '\2018';
+}
+
+:lang(cs) q {
+	quotes: '\201E' '\201C' '\201A' '\2018';
+}
+
+:lang(da) q {
+	quotes: '\00BB' '\00AB' '\203A' '\2039';
+}
+
+:lang(de) q {
+	quotes: '\201E' '\201C' '\201A' '\2018';
+}
+
+:lang(el) q {
+	quotes: '\00AB' '\00BB' '\2039' '\203A';
+}
+
+:lang(en- qGB) {
+	quotes: '\2018' '\2019' '\201C' '\201D';
+}
+
+:lang(es) q {
+	quotes: '\00AB' '\00BB' '\2039' '\203A';
+}
+
+:lang(fi) q {
+	quotes: '\201D' '\201D' '\2019' '\2019';
+}
+
+:lang(fr) q {
+	quotes: '\ab\2005' '\2005\bb' '\2039\2005' '\2005\203a';
+}
+
+:lang(hr) q {
+	quotes: '\00BB' '\00AB' '\203A' '\2039';
+}
+
+:lang(is) q {
+	quotes: '\201E' '\201C' '\201A' '\2018';
+}
+
+:lang(lt) q {
+	quotes: '\201E' '\201C' '\201A' '\2018';
+}
+
+:lang(nl) q {
+	quotes: '\201E' '\201D' '\201A' '\2019';
+}
+
+:lang(pl) q {
+	quotes: '\201E' '\201D' '\201A' '\2019';
+}
+
+:lang(ro) q {
+	quotes: '\201E' '\201C' '\201A' '\2018';
+}
+
+:lang(sk) q {
+	quotes: '\201E' '\201C' '\201A' '\2018';
+}
+
+:lang(sq) q {
+	quotes: '\00AB' '\00BB' '\2039' '\203A';
+}
+
+:lang(sr) q {
+	quotes: '\201E' '\201C' '\201A' '\2018';
+}
+
+:lang(sv) q {
+	quotes: '\201D' '\201D' '\2019' '\2019';
+}
+
+:lang(tr) q {
+	quotes: '\00AB' '\00BB' '\2039' '\203A';
+}
+
+:lang(ru) q {
+    quotes: '\00AB' '\00BB' '\201E' '\201C';
+}

@@ -1,0 +1,62 @@
+/*  =======================================================
+
+		Table of content
+
+			* Import
+
+			* Media queries
+
+	======================================================= */
+
+
+
+
+
+/*  =======================================================
+
+		Imports
+
+	=======================================================  */
+
+@import 'variables/_variables-layout';
+@import 'variables/_variables-skin';
+
+
+
+
+
+/*  =======================================================
+
+		Media queries
+
+	=======================================================  */
+
+html::before {
+	content: "Mobile mq: less than #{$mq-tablet__min}";
+	position: fixed;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	padding: .5em;
+	background-color: $copy-color__primary--hover;
+	color: $copy-color__alternate;
+	text-align: center;
+}
+
+@media (min-width: $mq-tablet__min) and (max-width: $mq-tablet__max) {
+	html::before {
+		content: "Tablet mq: between #{$mq-tablet__min} and #{$mq-tablet__max}";
+	}
+}
+
+@media (min-width: $mq-desktop__min) and (max-width: $mq-desktop__max)  {
+	html::before {
+		content: "Desktop mq: between #{$mq-desktop__min} and #{$mq-desktop__max}";
+	}
+}
+
+@media (min-width: $mq-big-screen__min) {
+	html::before {
+		content: "Bigscreen mq: more than #{$mq-big-screen__min}";
+	}
+}

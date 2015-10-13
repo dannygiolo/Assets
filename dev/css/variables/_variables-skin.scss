@@ -2,10 +2,40 @@
 
 		Table of Content
 
+			* Palette
+				- Main colors
+				- Dialog colors
+
 			* Typography
 
 	======================================================= */
 
+
+
+
+
+/*  =======================================================
+
+		Palette
+
+	=======================================================  */
+
+/* Copy colors */
+$copy-color__primary: rgba(0,0,0,1);
+$copy-color__primary--hover: rgba(0,0,0,.8);
+
+$copy-color__alternate: rgba(255,255,255,1);
+$copy-color__alternate--hover: rgba(255,255,255,.8);
+
+/* Dialog colors */
+$color__warning: rgba(255,215,0,1);
+$color__warning--hover: rgba(255,215,0,.8);
+
+$color__danger: rgba(255,55,0,1);
+$color__danger--hover: rgba(255,55,0,.8);
+
+$color__success: rgba(92,184,92,1);
+$color__success--hover: rgba(92,184,92,.8);
 
 
 
@@ -29,7 +59,7 @@ $line-height: 1.4;
 
 $font-stacking: sans-serif;
 
-$body-copy--color: #111;
+$body-copy--color: $copy-color__primary;
 
 $h1--font-size: 2.5em;
 $h2--font-size: 1.5em;

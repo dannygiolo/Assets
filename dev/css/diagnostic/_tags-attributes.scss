@@ -1,0 +1,108 @@
+/*  =======================================================
+
+		Table of content
+
+			* Imports
+
+			* Tags/attributes
+				- Empty
+				- Deprecated
+				- Images
+				- Tables
+				- Link
+
+	======================================================= */
+
+
+
+
+
+/*  =======================================================
+
+		Imports
+
+	=======================================================  */
+
+@import 'variables/_variables-layout';
+@import 'variables/_variables-skin';
+
+
+
+
+
+
+/*  =======================================================
+
+		Tag/attributes
+
+	=======================================================  */
+
+/* Empty */
+*:empty {
+	padding: 0.5em; 
+	background: $color__warning;
+}
+
+*[class=""],
+*[id=""] {
+	outline: 5px dotted $color__danger;
+}
+
+/* Deprecated */
+*[style],
+font,
+center {
+	outline: 5px solid $color__danger;
+}
+
+/* Images */
+img[alt=""] {
+	outline: 3px dotted $color__warning;
+}
+
+img:not([alt]) {
+	outline: 5px solid $color__warning;
+}
+
+img[title=""] {
+	outline: 3px dotted $color__warning;
+}
+
+img:not([title]) {
+	outline: 5px solid $color__warning;
+}
+
+/* Tables */
+table:not([summary]) {
+	outline: 5px solid $color__danger;
+}
+
+table[summary=""] {
+	outline: 3px dotted $color__danger;
+}
+
+th {
+	background-color: $color__danger;
+}
+
+th[scope="col"],
+th[scope="row"] {
+	background-color: none;
+}
+
+/* Links */
+a[href]:not([title]) {
+	outline: 5px solid $color__danger;
+}
+
+a[title=""] {
+	outline: 3px dotted $color__danger;
+}
+
+a[href="#"] {
+	background: $color__warning;
+}
+
+a[href=""] {
+	background: $color__warning;
+}

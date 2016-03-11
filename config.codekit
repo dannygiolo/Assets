@@ -1,6 +1,6 @@
 {
 "CodeKitInfo": "This is a CodeKit 2.x project configuration file. It is designed to sync project settings across multiple machines. MODIFYING THE CONTENTS OF THIS FILE IS A POOR LIFE DECISION. If you do so, you will likely cause CodeKit to crash. This file is not useful unless accompanied by the project that created it in CodeKit 2. This file is not backwards-compatible with CodeKit 1.x. For more information, see: http:\/\/incident57.com\/codekit",
-"creatorBuild": "19051",
+"creatorBuild": "19115",
 "files": {
 	"\/dev\/_index.kit": {
 		"fileType": 2048,
@@ -77,22 +77,6 @@
 		"shouldRunBless": 0,
 		"useLibsass": 0
 		},
-	"\/dev\/css\/components\/_form-elements.scss": {
-		"createSourceMap": 0,
-		"debugStyle": 0,
-		"decimalPrecision": 10,
-		"fileType": 4,
-		"ignore": 1,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/dev\/css\/components\/_form-elements.scss",
-		"outputAbbreviatedPath": "\/dev\/css\/css\/_form-elements.css",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 0,
-		"shouldRunAutoprefixer": 0,
-		"shouldRunBless": 0,
-		"useLibsass": 0
-		},
 	"\/dev\/css\/components\/_helpers.scss": {
 		"createSourceMap": 0,
 		"debugStyle": 0,
@@ -109,15 +93,15 @@
 		"shouldRunBless": 0,
 		"useLibsass": 0
 		},
-	"\/dev\/css\/components\/_lists.scss": {
+	"\/dev\/css\/components\/mixins\/_animations.scss": {
 		"createSourceMap": 0,
 		"debugStyle": 0,
 		"decimalPrecision": 10,
 		"fileType": 4,
 		"ignore": 1,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/dev\/css\/components\/_lists.scss",
-		"outputAbbreviatedPath": "\/dev\/css\/css\/_lists.css",
+		"inputAbbreviatedPath": "\/dev\/css\/components\/mixins\/_animations.scss",
+		"outputAbbreviatedPath": "\/dev\/css\/components\/css\/_animations.css",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 0,
@@ -125,15 +109,15 @@
 		"shouldRunBless": 0,
 		"useLibsass": 0
 		},
-	"\/dev\/css\/components\/_mixins.scss": {
+	"\/dev\/css\/components\/mixins\/_mixins.scss": {
 		"createSourceMap": 0,
 		"debugStyle": 0,
 		"decimalPrecision": 10,
 		"fileType": 4,
 		"ignore": 1,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/dev\/css\/components\/_mixins.scss",
-		"outputAbbreviatedPath": "\/dev\/css\/css\/_mixins.css",
+		"inputAbbreviatedPath": "\/dev\/css\/components\/mixins\/_mixins.scss",
+		"outputAbbreviatedPath": "\/dev\/css\/components\/css\/_mixins.css",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 0,
@@ -141,15 +125,15 @@
 		"shouldRunBless": 0,
 		"useLibsass": 0
 		},
-	"\/dev\/css\/components\/_modals.scss": {
+	"\/dev\/css\/components\/mixins\/_transitions.scss": {
 		"createSourceMap": 0,
 		"debugStyle": 0,
 		"decimalPrecision": 10,
 		"fileType": 4,
 		"ignore": 1,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/dev\/css\/components\/_modals.scss",
-		"outputAbbreviatedPath": "\/dev\/css\/css\/_modals.css",
+		"inputAbbreviatedPath": "\/dev\/css\/components\/mixins\/_transitions.scss",
+		"outputAbbreviatedPath": "\/dev\/css\/components\/css\/_transitions.css",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 0,
@@ -157,15 +141,95 @@
 		"shouldRunBless": 0,
 		"useLibsass": 0
 		},
-	"\/dev\/css\/components\/_tables.scss": {
+	"\/dev\/css\/components\/mixins\/_viewport-units.scss": {
 		"createSourceMap": 0,
 		"debugStyle": 0,
 		"decimalPrecision": 10,
 		"fileType": 4,
 		"ignore": 1,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/dev\/css\/components\/_tables.scss",
-		"outputAbbreviatedPath": "\/dev\/css\/css\/_tables.css",
+		"inputAbbreviatedPath": "\/dev\/css\/components\/mixins\/_viewport-units.scss",
+		"outputAbbreviatedPath": "\/dev\/css\/components\/css\/_viewport-units.css",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"shouldRunAutoprefixer": 0,
+		"shouldRunBless": 0,
+		"useLibsass": 0
+		},
+	"\/dev\/css\/components\/ui\/_form-elements.scss": {
+		"createSourceMap": 0,
+		"debugStyle": 0,
+		"decimalPrecision": 10,
+		"fileType": 4,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/dev\/css\/components\/ui\/_form-elements.scss",
+		"outputAbbreviatedPath": "\/dev\/css\/components\/css\/_form-elements.css",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"shouldRunAutoprefixer": 0,
+		"shouldRunBless": 0,
+		"useLibsass": 0
+		},
+	"\/dev\/css\/components\/ui\/_lists.scss": {
+		"createSourceMap": 0,
+		"debugStyle": 0,
+		"decimalPrecision": 10,
+		"fileType": 4,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/dev\/css\/components\/ui\/_lists.scss",
+		"outputAbbreviatedPath": "\/dev\/css\/components\/css\/_lists.css",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"shouldRunAutoprefixer": 0,
+		"shouldRunBless": 0,
+		"useLibsass": 0
+		},
+	"\/dev\/css\/components\/ui\/_modals.scss": {
+		"createSourceMap": 0,
+		"debugStyle": 0,
+		"decimalPrecision": 10,
+		"fileType": 4,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/dev\/css\/components\/ui\/_modals.scss",
+		"outputAbbreviatedPath": "\/dev\/css\/components\/css\/_modals.css",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"shouldRunAutoprefixer": 0,
+		"shouldRunBless": 0,
+		"useLibsass": 0
+		},
+	"\/dev\/css\/components\/ui\/_tables.scss": {
+		"createSourceMap": 0,
+		"debugStyle": 0,
+		"decimalPrecision": 10,
+		"fileType": 4,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/dev\/css\/components\/ui\/_tables.scss",
+		"outputAbbreviatedPath": "\/dev\/css\/components\/css\/_tables.css",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"shouldRunAutoprefixer": 0,
+		"shouldRunBless": 0,
+		"useLibsass": 0
+		},
+	"\/dev\/css\/components\/ui\/_ui.scss": {
+		"createSourceMap": 0,
+		"debugStyle": 0,
+		"decimalPrecision": 10,
+		"fileType": 4,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/dev\/css\/components\/ui\/_ui.scss",
+		"outputAbbreviatedPath": "\/dev\/css\/components\/css\/_ui.css",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 0,
@@ -285,6 +349,22 @@
 		"shouldRunBless": 0,
 		"useLibsass": 0
 		},
+	"\/dev\/css\/includes\/_social-wall.scss": {
+		"createSourceMap": 0,
+		"debugStyle": 0,
+		"decimalPrecision": 10,
+		"fileType": 4,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/dev\/css\/includes\/_social-wall.scss",
+		"outputAbbreviatedPath": "\/dev\/css\/css\/_social-wall.css",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"shouldRunAutoprefixer": 0,
+		"shouldRunBless": 0,
+		"useLibsass": 0
+		},
 	"\/dev\/css\/scaffolding\/_layout.scss": {
 		"createSourceMap": 0,
 		"debugStyle": 0,
@@ -365,14 +445,14 @@
 		"shouldRunBless": 0,
 		"useLibsass": 0
 		},
-	"\/dev\/css\/skin\/_icons.scss": {
+	"\/dev\/css\/theme\/_icons.scss": {
 		"createSourceMap": 0,
 		"debugStyle": 0,
 		"decimalPrecision": 10,
 		"fileType": 4,
 		"ignore": 1,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/dev\/css\/skin\/_icons.scss",
+		"inputAbbreviatedPath": "\/dev\/css\/theme\/_icons.scss",
 		"outputAbbreviatedPath": "\/dev\/css\/css\/_icons.css",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
@@ -381,15 +461,15 @@
 		"shouldRunBless": 0,
 		"useLibsass": 0
 		},
-	"\/dev\/css\/skin\/_skin.scss": {
+	"\/dev\/css\/theme\/_theme.scss": {
 		"createSourceMap": 0,
 		"debugStyle": 0,
 		"decimalPrecision": 10,
 		"fileType": 4,
 		"ignore": 1,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/dev\/css\/skin\/_skin.scss",
-		"outputAbbreviatedPath": "\/dev\/css\/css\/_skin.css",
+		"inputAbbreviatedPath": "\/dev\/css\/theme\/_theme.scss",
+		"outputAbbreviatedPath": "\/dev\/css\/css\/_theme.css",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 0,
@@ -397,15 +477,15 @@
 		"shouldRunBless": 0,
 		"useLibsass": 0
 		},
-	"\/dev\/css\/skin\/clients\/_client.scss": {
+	"\/dev\/css\/theme\/clients\/_client.scss": {
 		"createSourceMap": 0,
 		"debugStyle": 0,
 		"decimalPrecision": 10,
 		"fileType": 4,
 		"ignore": 1,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/dev\/css\/skin\/clients\/_client.scss",
-		"outputAbbreviatedPath": "\/dev\/css\/skin\/css\/_client.css",
+		"inputAbbreviatedPath": "\/dev\/css\/theme\/clients\/_client.scss",
+		"outputAbbreviatedPath": "\/dev\/css\/theme\/css\/_client.css",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 0,
@@ -413,15 +493,15 @@
 		"shouldRunBless": 0,
 		"useLibsass": 0
 		},
-	"\/dev\/css\/skin\/clients\/_variables-override.scss": {
+	"\/dev\/css\/theme\/clients\/_variables-override.scss": {
 		"createSourceMap": 0,
 		"debugStyle": 0,
 		"decimalPrecision": 10,
 		"fileType": 4,
 		"ignore": 1,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/dev\/css\/skin\/clients\/_variables-override.scss",
-		"outputAbbreviatedPath": "\/dev\/css\/skin\/css\/_variables-override.css",
+		"inputAbbreviatedPath": "\/dev\/css\/theme\/clients\/_variables-override.scss",
+		"outputAbbreviatedPath": "\/dev\/css\/theme\/css\/_variables-override.css",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 0,
@@ -525,15 +605,15 @@
 		"shouldRunBless": 0,
 		"useLibsass": 0
 		},
-	"\/dev\/css\/variables\/_variables-skin.scss": {
+	"\/dev\/css\/variables\/_variables-theme.scss": {
 		"createSourceMap": 0,
 		"debugStyle": 0,
 		"decimalPrecision": 10,
 		"fileType": 4,
 		"ignore": 1,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/dev\/css\/variables\/_variables-skin.scss",
-		"outputAbbreviatedPath": "\/dev\/css\/css\/_variables-skin.css",
+		"inputAbbreviatedPath": "\/dev\/css\/variables\/_variables-theme.scss",
+		"outputAbbreviatedPath": "\/dev\/css\/css\/_variables-theme.css",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 0,
@@ -565,6 +645,15 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/dev\/includes\/_main-nav.kit",
 		"outputAbbreviatedPath": "\/dev\/includes\/_main-nav.html",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/dev\/includes\/_social-wall.kit": {
+		"fileType": 2048,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/dev\/includes\/_social-wall.kit",
+		"outputAbbreviatedPath": "\/dev\/includes\/_social-wall.html",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
@@ -620,6 +709,17 @@
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
+		},
+	"\/dev\/js\/liveblog.json": {
+		"fileType": 524288,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/dev\/js\/liveblog.json",
+		"orderOutput": 0,
+		"outputAbbreviatedPath": "\/dev\/js\/liveblog-min.json",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1
 		},
 	"\/prod\/css\/base.css": {
 		"fileType": 16,
@@ -764,8 +864,16 @@
 			"active": 0,
 			"flagValue": -1
 			},
+		"no_nested_string_interpolation": {
+			"active": 1,
+			"flagValue": -1
+			},
 		"no_plusplus": {
 			"active": 0,
+			"flagValue": -1
+			},
+		"no_private_function_fat_arrows": {
+			"active": 1,
 			"flagValue": -1
 			},
 		"no_stand_alone_at": {
@@ -774,6 +882,10 @@
 			},
 		"no_tabs": {
 			"active": 1,
+			"flagValue": -1
+			},
+		"no_this": {
+			"active": 0,
 			"flagValue": -1
 			},
 		"no_throwing_strings": {
@@ -1290,7 +1402,9 @@
 	"typescriptAutoOutputPathStyle": 2,
 	"typescriptCreateDeclarationFile": 0,
 	"typescriptCreateSourceMap": 0,
+	"typescriptJSXMode": 0,
 	"typescriptMinifyOutput": 0,
+	"typescriptModuleResolutionType": 0,
 	"typescriptModuleType": 0,
 	"typescriptNoImplicitAny": 0,
 	"typescriptPreserveConstEnums": 0,

@@ -1,0 +1,252 @@
+
+//   /$$$$$$                                               /$$              
+//  |_  $$_/                                              | $$              
+//    | $$   /$$$$$$/$$$$   /$$$$$$   /$$$$$$   /$$$$$$  /$$$$$$    /$$$$$$$
+//    | $$  | $$_  $$_  $$ /$$__  $$ /$$__  $$ /$$__  $$|_  $$_/   /$$_____/
+//    | $$  | $$ \ $$ \ $$| $$  \ $$| $$  \ $$| $$  \__/  | $$    |  $$$$$$ 
+//    | $$  | $$ | $$ | $$| $$  | $$| $$  | $$| $$        | $$ /$$ \____  $$
+//   /$$$$$$| $$ | $$ | $$| $$$$$$$/|  $$$$$$/| $$        |  $$$$/ /$$$$$$$/
+//  |______/|__/ |__/ |__/| $$____/  \______/ |__/         \___/  |_______/ 
+//                        | $$                                              
+//                        | $$                                              
+//                        |__/                                              
+
+@import '../../variables/variables-layout';
+@import '../../variables/variables-theme';
+
+
+
+
+
+
+//   /$$$$$$$$                                   /$$             /$$                  
+//  |__  $$__/                                  | $$            | $$                  
+//     | $$     /$$$$$$  /$$$$$$/$$$$   /$$$$$$ | $$  /$$$$$$  /$$$$$$    /$$$$$$     
+//     | $$    /$$__  $$| $$_  $$_  $$ /$$__  $$| $$ |____  $$|_  $$_/   /$$__  $$    
+//     | $$   | $$$$$$$$| $$ \ $$ \ $$| $$  \ $$| $$  /$$$$$$$  | $$    | $$$$$$$$    
+//     | $$   | $$_____/| $$ | $$ | $$| $$  | $$| $$ /$$__  $$  | $$ /$$| $$_____/    
+//     | $$   |  $$$$$$$| $$ | $$ | $$| $$$$$$$/| $$|  $$$$$$$  |  $$$$/|  $$$$$$$    
+//     |__/    \_______/|__/ |__/ |__/| $$____/ |__/ \_______/   \___/   \_______/    
+//                                    | $$                                            
+//                                    | $$                                            
+//                                    |__/                                            
+
+/*
+
+This template is a two step mixin and it's used to invoke any animation and its keyframes.
+
+When calling this mixin the order is important within each animation definition: the first value that can be parsed as a <time> is assigned to the animation-duration, and the second one is assigned to animation-delay.
+
+Note that order is also for distinguishing animation-name values from other keywords.
+When parsing, keywords that are valid for properties other than animation-name whose values were not found earlier in the shorthand must be accepted for those properties rather than for animation-name. Furthermore, when serializing, default values of other properties must be output in at least the cases necessary to distinguish an animation-name that could be a value of another property, and may be output in additional cases.
+
+The attribute setted as null are not printed in the compiled rule.
+
+If you need to add another animation to the library just fill the needed keyframes and make sure to give it a unique name.
+This can be done in this very file or in the file that invoke the specific animation mixin.
+
+Source: http://zerosixthree.se/8-sass-mixins-you-must-have-in-your-toolbox/
+
+*/
+
+@mixin animation-template(
+	$animation--name,
+	$animation-duration,
+	$animation--timing-function: ease-in-out,
+	$animation--delay: null,
+	$animation--iteration-count: null,
+	$animation--direction: null,
+	$animation--fill-mode: null,
+	$animation--play-state: null) {
+
+		-webkit-animation: $animation-duration
+						   $animation--timing-function
+						   $animation--delay
+						   $animation--iteration-count
+						   $animation--direction
+						   $animation--fill-mode
+						   $animation--play-state
+						   $animation--name;
+
+				animation: $animation-duration
+						   $animation--timing-function
+						   $animation--delay
+						   $animation--iteration-count
+						   $animation--direction
+						   $animation--fill-mode
+						   $animation--play-state
+						   $animation--name;
+}
+
+@mixin keyframes-template($animation-name) {
+	@-webkit-keyframes #{$animation-name} {
+		@content;
+	}
+
+	@keyframes #{$animation-name} {
+		@content;
+	}
+}
+
+
+
+
+
+
+//   /$$$$$$$            /$$                          
+//  | $$__  $$          | $$                          
+//  | $$  \ $$ /$$   /$$| $$  /$$$$$$$  /$$$$$$       
+//  | $$$$$$$/| $$  | $$| $$ /$$_____/ /$$__  $$      
+//  | $$____/ | $$  | $$| $$|  $$$$$$ | $$$$$$$$      
+//  | $$      | $$  | $$| $$ \____  $$| $$_____/      
+//  | $$      |  $$$$$$/| $$ /$$$$$$$/|  $$$$$$$      
+//  |__/       \______/ |__/|_______/  \_______/      
+//                                                    
+//                                                    
+//                                                    
+
+/* 
+
+The pulse animation simulates a heart beating.
+It scales an element up, then down and then back to its original size, usually to try and canalize user attention to that element.
+
+*/
+
+@-webkit-keyframes animation--pulse {
+	0% {
+		-webkit-transform: scale(1);
+	}
+
+	5% {
+		-webkit-transform: scale(.9);
+	}
+
+	10% {
+		-webkit-transform: scale(1.1);
+	}
+
+	15% {
+		-webkit-transform: scale(.8);
+	}
+
+	20% {
+		-webkit-transform: scale(1);
+	}
+
+	100% {
+		-webkit-transform: scale(1);
+	}
+}
+
+@keyframes animation-pulse {
+	0% {
+		transform: scale(1);
+	}
+
+	5% {
+		transform: scale(.9);
+	}
+
+	10% {
+		transform: scale(1.1);
+	}
+
+	15% {
+		transform: scale(.8);
+	}
+
+	20% {
+		transform: scale(1);
+	}
+
+	100% {
+		transform: scale(1);
+	}
+}
+
+
+
+
+
+
+//   /$$$$$$$$                                         /$$             /$$              
+//  |__  $$__/                                        | $$            | $$              
+//     | $$     /$$$$$$   /$$$$$$  /$$$$$$$   /$$$$$$$| $$  /$$$$$$  /$$$$$$    /$$$$$$ 
+//     | $$    /$$__  $$ |____  $$| $$__  $$ /$$_____/| $$ |____  $$|_  $$_/   /$$__  $$
+//     | $$   | $$  \__/  /$$$$$$$| $$  \ $$|  $$$$$$ | $$  /$$$$$$$  | $$    | $$$$$$$$
+//     | $$   | $$       /$$__  $$| $$  | $$ \____  $$| $$ /$$__  $$  | $$ /$$| $$_____/
+//     | $$   | $$      |  $$$$$$$| $$  | $$ /$$$$$$$/| $$|  $$$$$$$  |  $$$$/|  $$$$$$$
+//     |__/   |__/       \_______/|__/  |__/|_______/ |__/ \_______/   \___/   \_______/
+//                                                                                      
+//                                                                                      
+//                                                                                      
+
+/*
+
+The translate animation gets an element and move it from its start to its ending either vertically or horizontally.
+It's usually used as an overlay to simulate some kind of progress bar.
+
+*/
+
+@keyframes animation--vertical-translate {
+	0% {
+		transform: translateY(100%);
+	}
+
+	100% { 
+		transform: translateY(-100%);
+	}
+}
+
+@keyframes animation--horizontal-translate {
+	0% {
+		transform: translateX(100%);
+	}
+
+	100% { 
+		transform: translateX(-100%);
+	}
+}
+
+
+
+
+
+
+//   /$$$$$$$$                     /$$                     /$$                    
+//  | $$_____/                    | $$                    |__/                    
+//  | $$       /$$   /$$  /$$$$$$ | $$  /$$$$$$   /$$$$$$$ /$$  /$$$$$$  /$$$$$$$ 
+//  | $$$$$   |  $$ /$$/ /$$__  $$| $$ /$$__  $$ /$$_____/| $$ /$$__  $$| $$__  $$
+//  | $$__/    \  $$$$/ | $$  \ $$| $$| $$  \ $$|  $$$$$$ | $$| $$  \ $$| $$  \ $$
+//  | $$        >$$  $$ | $$  | $$| $$| $$  | $$ \____  $$| $$| $$  | $$| $$  | $$
+//  | $$$$$$$$ /$$/\  $$| $$$$$$$/| $$|  $$$$$$/ /$$$$$$$/| $$|  $$$$$$/| $$  | $$
+//  |________/|__/  \__/| $$____/ |__/ \______/ |_______/ |__/ \______/ |__/  |__/
+//                      | $$                                                      
+//                      | $$                                                      
+//                      |__/                                                      
+
+/*
+
+The explosion animation gets and element and fade it out and shrinks it to zero dimension (invisible). Then it grows beyond its current dimension and fade out again.
+
+*/
+
+@keyframes animation--explosion {
+	0% {
+		transform: scale(0);
+		opacity: 0;
+	}
+
+	30% {
+		opacity: 1;
+	}
+
+	60% {
+		transform: scale(1.3);
+	}
+
+	100% {
+		transform: scale(1);
+		opacity: 0;
+	}
+}

@@ -1,0 +1,50 @@
+
+//   /$$    /$$ /$$                                                         /$$    
+//  | $$   | $$|__/                                                        | $$    
+//  | $$   | $$ /$$  /$$$$$$  /$$  /$$  /$$  /$$$$$$   /$$$$$$   /$$$$$$  /$$$$$$  
+//  |  $$ / $$/| $$ /$$__  $$| $$ | $$ | $$ /$$__  $$ /$$__  $$ /$$__  $$|_  $$_/  
+//   \  $$ $$/ | $$| $$$$$$$$| $$ | $$ | $$| $$  \ $$| $$  \ $$| $$  \__/  | $$    
+//    \  $$$/  | $$| $$_____/| $$ | $$ | $$| $$  | $$| $$  | $$| $$        | $$ /$$
+//     \  $/   | $$|  $$$$$$$|  $$$$$/$$$$/| $$$$$$$/|  $$$$$$/| $$        |  $$$$/
+//      \_/    |__/ \_______/ \_____/\___/ | $$____/  \______/ |__/         \___/  
+//                                         | $$                                    
+//                                         | $$                                    
+//                                         |__/                                    
+
+//   /$$   /$$           /$$   /$$              
+//  | $$  | $$          |__/  | $$              
+//  | $$  | $$ /$$$$$$$  /$$ /$$$$$$    /$$$$$$$
+//  | $$  | $$| $$__  $$| $$|_  $$_/   /$$_____/
+//  | $$  | $$| $$  \ $$| $$  | $$    |  $$$$$$ 
+//  | $$  | $$| $$  | $$| $$  | $$ /$$ \____  $$
+//  |  $$$$$$/| $$  | $$| $$  |  $$$$/ /$$$$$$$/
+//   \______/ |__/  |__/|__/   \___/  |_______/ 
+//                                              
+//                                              
+//                                              
+
+/* 
+
+This mixin is the fundamental block of all css in the sportteller project.
+Its job is to recieved unitless value so that it can translate those value into viewport units based on device orientation.
+This approach let us abandon all others media queries in terms of resizing for different viewports as all elements resize and scale automatically based on which side of the viewport is bigger.
+
+*/
+
+@mixin orientation-related-attribute($attribute, $args) {
+	$vh-value: ();
+	$vw-value: ();
+
+	@each $arg in $args {
+		$vh-value: append($vh-value, #{$arg}vh);
+		$vw-value: append($vw-value, #{$arg}vw);
+	}
+	
+	@media (orientation: portrait) {
+		#{$attribute}: #{$vh-value};
+	}
+
+	@media (orientation: landscape) {
+		#{$attribute}: #{$vw-value};
+	}
+}

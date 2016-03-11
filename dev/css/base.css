@@ -1,148 +1,164 @@
-/*  =======================================================
+/*
 
-		Table of content
+_base.scss is the entry point for all the stylesheets. 
+It compiles all the scss partials into base.css and that's the only css file we bring to prod.
 
-			* Imports
+To follow a list of the other partials it imports in strict inclusion order.
 
-			* Dev
+*** _variables-layout.scss contains all the layout related variables. No style allowed here, just everything box model related:
+	- media queries
+	- sizing
+	- offsets
 
-	======================================================= */
-/*  =======================================================
+*** _variables-theme.scss in oppositions contains all the theme related variables. Here you can find:
+	- color palettes
+	- font declarations
+	- sprite details
+	- animations parameters
 
-		Imports
+*** _components.scss contains the classes and mixins that are not going to be use by themeselves, but as the name suggests as components for more complex objects:
+	- clear fixes
+	- media objects
+	- z-index map
+	- mixins
+	- animations
 
-	=======================================================  */
-/*  =======================================================
+*** _scaffolding.scss covers all the layout necessities:
+	- css reset
+	- site wide layout
 
-		Table of content
+*** _typography.scss is the place to go for anything font related:
+	- font-face
+	- font attributes
+	- geolocalized quotes
 
-			* Imports
+*** _includes.scss is a step forward in terms of object complexity library. Many of the objects in this section consists of extensions and customizations of _components.scss into more complex objects:
+	- main navigation
+	- custom video controls
+	- complex animations
 
-	======================================================= */
-/*  =======================================================
+*** _sections.scss contains all the styles and customizations for specific sections.
 
-		Imports
+*** _theme.scss is the files that hosts the base for the main theme plus all of the different theme based on clients
+	- icons
+	- theme
+	- client overrides
 
-	=======================================================  */
-/*  =======================================================
-
-		Table of Content
-
-		* Media queries
-
-	======================================================= */
-/*  =======================================================
-
-		Media queries
-
-	======================================================= */
+*/
 /* 480px */
 /* 960px */
 /* 961px */
 /* 1280px */
 /* 1281px */
-/*  =======================================================
-
-		Table of Content
-
-			* Palette
-				- Main colors
-				- Dialog colors
-
-			* Typography
-
-	======================================================= */
-/*  =======================================================
-
-		Palette
-
-	=======================================================  */
 /* Copy colors */
 /* Dialog colors */
-/*  =======================================================
-
-		Typography
-
-	=======================================================  */
 /* Vertical ryhthm */
 /* Source: 
 	- http://www.smashingmagazine.com/2012/12/17/css-baseline-the-good-the-bad-and-the-ugly/
 	- http://24ways.org/2006/compose-to-a-vertical-rhythm/
  */
 /* 62.5% = 1em = 10px */
-/*  =======================================================
+html::before {
+  content: "Mobile mq: less than 30rem";
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: .5em;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  text-align: center; }
 
-		Table of Content
-
-		* Media queries
-
-	======================================================= */
-/*  =======================================================
-
-		Media queries
-
-	======================================================= */
+@media (min-width: 30rem) and (max-width: 60rem) {
+  html::before {
+    content: "Tablet mq: between 30rem and 60rem"; } }
+@media (min-width: 60.0625rem) and (max-width: 80rem) {
+  html::before {
+    content: "Desktop mq: between 60.0625rem and 80rem"; } }
+@media (min-width: 80.0625rem) {
+  html::before {
+    content: "Bigscreen mq: more than 80.0625rem"; } }
 /* 480px */
 /* 960px */
 /* 961px */
 /* 1280px */
 /* 1281px */
-/*  =======================================================
-
-		Table of Content
-
-			* Palette
-				- Main colors
-				- Dialog colors
-
-			* Typography
-
-	======================================================= */
-/*  =======================================================
-
-		Palette
-
-	=======================================================  */
 /* Copy colors */
 /* Dialog colors */
-/*  =======================================================
-
-		Typography
-
-	=======================================================  */
 /* Vertical ryhthm */
 /* Source: 
 	- http://www.smashingmagazine.com/2012/12/17/css-baseline-the-good-the-bad-and-the-ugly/
 	- http://24ways.org/2006/compose-to-a-vertical-rhythm/
  */
 /* 62.5% = 1em = 10px */
-/*  =======================================================
+/* Empty */
+*:empty {
+  padding: 0.5em;
+  background: gold; }
 
-		Table of content
+*[class=""],
+*[id=""] {
+  outline: 5px dotted #ff3700; }
 
-			* Imports
+/* Deprecated */
+*[style],
+font,
+center {
+  outline: 5px solid #ff3700; }
 
-	======================================================= */
-/*  =======================================================
+/* Images */
+img[alt=""] {
+  outline: 3px dotted gold; }
 
-		Imports
+img:not([alt]) {
+  outline: 5px solid gold; }
 
-	=======================================================  */
-/*  =======================================================
-	
-		Table of content
+img[title=""] {
+  outline: 3px dotted gold; }
 
-			* Starter
-				- New box model
-				- Resetting
-				- Normalizing		
-	  
-	======================================================= */
-/*  =======================================================
+img:not([title]) {
+  outline: 5px solid gold; }
 
-		Starter
+/* Tables */
+table:not([summary]) {
+  outline: 5px solid #ff3700; }
 
-	=======================================================  */
+table[summary=""] {
+  outline: 3px dotted #ff3700; }
+
+th {
+  background-color: #ff3700; }
+
+th[scope="col"],
+th[scope="row"] {
+  background-color: none; }
+
+/* Links */
+a[href]:not([title]) {
+  outline: 5px solid #ff3700; }
+
+a[title=""] {
+  outline: 3px dotted #ff3700; }
+
+a[href="#"] {
+  background: gold; }
+
+a[href=""] {
+  background: gold; }
+
+/* 480px */
+/* 960px */
+/* 961px */
+/* 1280px */
+/* 1281px */
+/* Copy colors */
+/* Dialog colors */
+/* Vertical ryhthm */
+/* Source: 
+	- http://www.smashingmagazine.com/2012/12/17/css-baseline-the-good-the-bad-and-the-ugly/
+	- http://24ways.org/2006/compose-to-a-vertical-rhythm/
+ */
+/* 62.5% = 1em = 10px */
 /* New box model */
 /* Source: http://www.paulirish.com/2012/box-sizing-border-box-ftw/ */
 /* http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
@@ -202,647 +218,168 @@ acronym {
   border-bottom-width: 1px;
   border-bottom-style: dotted; }
 
-/*  =======================================================
-
-		Table of content
-
-			* Imports
-
-	======================================================= */
-/*  =======================================================
-
-		Imports
-
-	=======================================================  */
-/*  =======================================================
-
-		Table of Content
-
-		* Media queries
-
-	======================================================= */
-/*  =======================================================
-
-		Media queries
-
-	======================================================= */
 /* 480px */
 /* 960px */
 /* 961px */
 /* 1280px */
 /* 1281px */
-/*  =======================================================
-
-		Table of content
-
-			* Imports
-
-	======================================================= */
-/*  =======================================================
-
-		Imports
-
-	=======================================================  */
-/*  =======================================================
-
-		Table of content
-
-			* Imports
-
-			* Font declaration
-				- Base
-				- Size
-				- Color
-
-	======================================================= */
-/*  =======================================================
-
-		Imports
-
-	=======================================================  */
-/*  =======================================================
-
-		Table of Content
-
-			* Palette
-				- Main colors
-				- Dialog colors
-
-			* Typography
-
-	======================================================= */
-/*  =======================================================
-
-		Palette
-
-	=======================================================  */
 /* Copy colors */
 /* Dialog colors */
-/*  =======================================================
-
-		Typography
-
-	=======================================================  */
 /* Vertical ryhthm */
 /* Source: 
 	- http://www.smashingmagazine.com/2012/12/17/css-baseline-the-good-the-bad-and-the-ugly/
 	- http://24ways.org/2006/compose-to-a-vertical-rhythm/
  */
 /* 62.5% = 1em = 10px */
-/*  =======================================================
+/*
 
-		Font declaration
+*** _components.scss contains the classes and mixins that are not going to be use by themeselves, but as the name suggests as components for more complex objects.
 
-	=======================================================  */
-/* Base */
-/* Confused on what to use between px, em and rem? */
-/* Read on: http://j.eremy.net/confused-about-rem-and-em/ */
-html {
-  font-size: 62.5%;
-  line-height: 1.4;
-  font-family: sans-serif;
-  color: black;
-  -webkit-hyphens: auto;
-  -moz-hyphens: auto;
-  hyphens: auto;
-  -ms-word-break: break-all;
-  word-break: break-all;
-  word-break: break-word;
-  /* non standard definition for webkit */
-  /* The Hyphenate-Before or -after sets a minimum number of characters before or after the hyphenation.
-  /* And hyphenate-lines how many lines can be hyphenated in a row. */
-  -webkit-hyphenate-before: 2;
-  -webkit-hyphenate-after: 3;
-  hyphenate-lines: 3; }
-
-/* Size */
-h1 {
-  font-size: 2.5em; }
-
-h2 {
-  font-size: 1.5em; }
-
-h3 {
-  font-size: 1.3125em; }
-
-h4 {
-  font-size: 1.125em; }
-
-h5 {
-  font-size: 1em; }
-
-h6 {
-  font-size: 1em; }
-
-p {
-  font-size: 1em; }
-
-q {
-  font-size: 1em; }
-
-/* Color */
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  color: black; }
-
-/*  =======================================================
-
-		Table of content
-
-			* Imports
-			
-			* @Font-face with style linking
-				- Brief
-				- Drawbacks
-
-	======================================================= */
-/*  =======================================================
-
-		Imports
-
-	=======================================================  */
-/*  =======================================================
-
-		Table of Content
-
-			* Palette
-				- Main colors
-				- Dialog colors
-
-			* Typography
-
-	======================================================= */
-/*  =======================================================
-
-		Palette
-
-	=======================================================  */
-/* Copy colors */
-/* Dialog colors */
-/*  =======================================================
-
-		Typography
-
-	=======================================================  */
-/* Vertical ryhthm */
-/* Source: 
-	- http://www.smashingmagazine.com/2012/12/17/css-baseline-the-good-the-bad-and-the-ugly/
-	- http://24ways.org/2006/compose-to-a-vertical-rhythm/
- */
-/* 62.5% = 1em = 10px */
-/*  =======================================================
-
-		@Font-face with style linking
-
-	=======================================================  */
-/*  Brief 
-		This technique consists in giving the the same font-family name multiple times,
-		setting the weights and styles in each @font-face declaration to match the weight
-		and style of the Web font file being accessed.
 */
-/*	Drawbacks
-		- crashes iPad1 and BlackBerry 9900
-		- compatible up to IE7
-		- if you use more than four weights and styles on the website, 
-			IE 7 and 8 will convert all light and medium weights to normal,
-			and all black and heavy weights to bold.
+/* 
+
+This mixin is the fundamental block of all css in the sportteller project.
+Its job is to recieved unitless value so that it can translate those value into viewport units based on device orientation.
+This approach let us abandon all others media queries in terms of resizing for different viewports as all elements resize and scale automatically based on which side of the viewport is bigger.
+
 */
-/*  Sources 
-	  - http://coding.smashingmagazine.com/2013/02/14/setting-weights-and-styles-at-font-face-declaration/
-*/
-@font-face {
-  font-family: 'Webfont';
-  src: url("webfont-light.eot");
-  src: url("webfont-light.eot?#iefix") format("embedded-opentype"), url("webfont-light.woff") format("woff"), url("webfont-light.ttf") format("truetype"), url("webfont-light.svg#WebfontLight") format("svg");
-  font-weight: 300;
-  font-style: normal; }
-@font-face {
-  font-family: 'Webfont';
-  src: url("webfont-light-italic.eot");
-  src: url("webfont-light-italic.eot?#iefix") format("embedded-opentype"), url("webfont-light-italic.woff") format("woff"), url("webfont-light-italic.ttf") format("truetype"), url("webfont-light-italic.svg#WebfontLightItalic") format("svg");
-  font-weight: 300;
-  font-style: italic; }
-@font-face {
-  font-family: 'Webfont';
-  src: url("webfont-regular.eot");
-  src: url("webfont-regular.eot?#iefix") format("embedded-opentype"), url("webfont-regular.woff") format("woff"), url("webfont-regular.ttf") format("truetype"), url("webfont-regular.svg#WebfontRegular") format("svg");
-  font-weight: 400;
-  font-style: normal; }
-@font-face {
-  font-family: 'Webfont';
-  src: url("webfont-bold.eot");
-  src: url("webfont-bold.eot?#iefix") format("embedded-opentype"), url("webfont-bold.woff") format("woff"), url("webfont-bold.ttf") format("truetype"), url("webfont-bold.svg#WebfontBold") format("svg");
-  font-weight: 700;
-  font-style: normal; }
-/* Additional classes for style linking */
-.font-300 {
-  font-family: 'Webfont', arial, sans-serif;
-  font-weight: 300;
-  font-style: normal; }
-
-.font-300-italic {
-  font-family: 'Webfont', arial, sans-serif;
-  font-weight: 300;
-  font-style: italic; }
-
-.font-400 {
-  font-family: 'Webfont', arial, sans-serif;
-  font-weight: 400;
-  font-style: normal; }
-
-.font-700 {
-  font-family: 'Webfont', arial, sans-serif;
-  font-weight: 700;
-  font-style: normal; }
-
-/*  =======================================================
-
-		Table of content
-
-			* Imports
-
-			* Font-size increments
-
-	======================================================= */
-/*  =======================================================
-
-		Imports
-
-	=======================================================  */
-/*  =======================================================
-
-		Table of Content
-
-			* Palette
-				- Main colors
-				- Dialog colors
-
-			* Typography
-
-	======================================================= */
-/*  =======================================================
-
-		Palette
-
-	=======================================================  */
-/* Copy colors */
-/* Dialog colors */
-/*  =======================================================
-
-		Typography
-
-	=======================================================  */
-/* Vertical ryhthm */
-/* Source: 
-	- http://www.smashingmagazine.com/2012/12/17/css-baseline-the-good-the-bad-and-the-ugly/
-	- http://24ways.org/2006/compose-to-a-vertical-rhythm/
- */
-/* 62.5% = 1em = 10px */
-/*  =======================================================
-
-		Font-size increments  
-
-	=======================================================  */
-/* Typography increment to keep the best word per line ratio */
-/* Source: http://trentwalton.com/2012/06/19/fluid-type/ */
-/* Tablets plus base desktops/laptops */
-@media (min-width: 30rem) and (max-width: 60rem) {
-  body {
-    font-size: 1.1em; } }
-/* Desktops */
-@media (min-width: 60.0625rem) and (max-width: 80rem) {
-  body {
-    font-size: 1.25em; } }
-/* Big screen monitors/TVs */
-@media (min-width: 80.0625rem) {
-  body {
-    font-size: 1.5em; } }
-/*  =======================================================
-
-		Table of content
-
-			* Imports
-
-	======================================================= */
-/*  =======================================================
-
-		Imports
-
-	=======================================================  */
-/*  =======================================================
-
-		Table of Content
-
-			* Palette
-				- Main colors
-				- Dialog colors
-
-			* Typography
-
-	======================================================= */
-/*  =======================================================
-
-		Palette
-
-	=======================================================  */
-/* Copy colors */
-/* Dialog colors */
-/*  =======================================================
-
-		Typography
-
-	=======================================================  */
-/* Vertical ryhthm */
-/* Source: 
-	- http://www.smashingmagazine.com/2012/12/17/css-baseline-the-good-the-bad-and-the-ugly/
-	- http://24ways.org/2006/compose-to-a-vertical-rhythm/
- */
-/* 62.5% = 1em = 10px */
-/* ============================================================
-
-   Typographically correct quotes
-
-============================================================ */
-.quote-highlight {
-  display: inline-block;
-  position: relative;
-  padding: 1.5em; }
-  .quote-highlight::before, .quote-highlight::after {
-    padding: .3em; }
-
-/* Quotes internationalization */
-:lang(af) q {
-  quotes: '\201E' '\201D' '\201A' '\2019'; }
-
-:lang(bg) q {
-  quotes: '\201E' '\201C' '\201A' '\2018'; }
-
-:lang(cs) q {
-  quotes: '\201E' '\201C' '\201A' '\2018'; }
-
-:lang(da) q {
-  quotes: '\00BB' '\00AB' '\203A' '\2039'; }
-
-:lang(de) q {
-  quotes: '\201E' '\201C' '\201A' '\2018'; }
-
-:lang(el) q {
-  quotes: '\00AB' '\00BB' '\2039' '\203A'; }
-
-:lang(en- qGB) {
-  quotes: '\2018' '\2019' '\201C' '\201D'; }
-
-:lang(es) q {
-  quotes: '\00AB' '\00BB' '\2039' '\203A'; }
-
-:lang(fi) q {
-  quotes: '\201D' '\201D' '\2019' '\2019'; }
-
-:lang(fr) q {
-  quotes: '\ab\2005' '\2005\bb' '\2039\2005' '\2005\203a'; }
-
-:lang(hr) q {
-  quotes: '\00BB' '\00AB' '\203A' '\2039'; }
-
-:lang(is) q {
-  quotes: '\201E' '\201C' '\201A' '\2018'; }
-
-:lang(lt) q {
-  quotes: '\201E' '\201C' '\201A' '\2018'; }
-
-:lang(nl) q {
-  quotes: '\201E' '\201D' '\201A' '\2019'; }
-
-:lang(pl) q {
-  quotes: '\201E' '\201D' '\201A' '\2019'; }
-
-:lang(ro) q {
-  quotes: '\201E' '\201C' '\201A' '\2018'; }
-
-:lang(sk) q {
-  quotes: '\201E' '\201C' '\201A' '\2018'; }
-
-:lang(sq) q {
-  quotes: '\00AB' '\00BB' '\2039' '\203A'; }
-
-:lang(sr) q {
-  quotes: '\201E' '\201C' '\201A' '\2018'; }
-
-:lang(sv) q {
-  quotes: '\201D' '\201D' '\2019' '\2019'; }
-
-:lang(tr) q {
-  quotes: '\00AB' '\00BB' '\2039' '\203A'; }
-
-:lang(ru) q {
-  quotes: '\00AB' '\00BB' '\201E' '\201C'; }
-
-/*  =======================================================
-
-		Table of content
-
-			* Imports
-
-	======================================================= */
-/*  =======================================================
-
-		Imports
-
-	=======================================================  */
-/*  =======================================================
-
-		Table of content
-
-			* Z-index map
-
-			* Hiding classes
-
-			* Media object
-
-			* Clear fix
-
-			* Pseudo elements
-
-			* Proportional height to width ratio
-			  - Padding (FitVideo.js like)
-			  
-	======================================================= */
-/*  =======================================================
-
-		Z-index map
-
-	=======================================================  */
-/* Source: http://css-tricks.com/handling-z-index/ */
-/*  =======================================================
-
-		Hiding classes
-
-	=======================================================  */
-/* Accessible by screen reader */
-/*  =======================================================
-
-		Media Object	  
-
-	=======================================================  */
-/* Sources 
-	- http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code/
-	- http://philipwalton.github.io/solved-by-flexbox/demos/media-object/
-*/
-/*  =======================================================
-
-		Clear fix
-
-	=======================================================  */
-/* Sources: http://nicolasgallagher.com/micro-clearfix-hack/ */
-/*  =======================================================
-
-		Pseudo elements
-
-	=======================================================  */
-/* Psuedo elements */
-/*  =======================================================
-
-		Proportional height to width ratio
-
-	=======================================================  */
-/* Sources:
-	- http://www.mademyday.de/css-height-equals-width-with-pure-css.html
-	- http://alistapart.com/article/creating-intrinsic-ratios-for-video
-*/
-/*  Demo: http://codepen.io/dannygiolo/pen/awEjq */
-/* Common ratios options */
-/*  =======================================================
-
-		Table of Content
-
-			* Imports
-
-	    	* Lists
-	    		- Default
-	    		- Horizontal
-	    		- Last item right floated
-	    		- Breadcrumbs
-	    		- Dashboard
-
-	======================================================= */
-/*  =======================================================
-
-		Imports
-
-	=======================================================  */
-/*  =======================================================
-
-		Table of Content
-
-		* Media queries
-
-	======================================================= */
-/*  =======================================================
-
-		Media queries
-
-	======================================================= */
 /* 480px */
 /* 960px */
 /* 961px */
 /* 1280px */
 /* 1281px */
-/*  =======================================================
-
-		Table of Content
-
-			* Palette
-				- Main colors
-				- Dialog colors
-
-			* Typography
-
-	======================================================= */
-/*  =======================================================
-
-		Palette
-
-	=======================================================  */
 /* Copy colors */
 /* Dialog colors */
-/*  =======================================================
-
-		Typography
-
-	=======================================================  */
 /* Vertical ryhthm */
 /* Source: 
 	- http://www.smashingmagazine.com/2012/12/17/css-baseline-the-good-the-bad-and-the-ugly/
 	- http://24ways.org/2006/compose-to-a-vertical-rhythm/
  */
 /* 62.5% = 1em = 10px */
-/*  ========================================================
+/*
 
-		Lists
+This template is a two step mixin and it's used to invoke any animation and its keyframes.
 
-	=======================================================  */
+When calling this mixin the order is important within each animation definition: the first value that can be parsed as a <time> is assigned to the animation-duration, and the second one is assigned to animation-delay.
+
+Note that order is also for distinguishing animation-name values from other keywords.
+When parsing, keywords that are valid for properties other than animation-name whose values were not found earlier in the shorthand must be accepted for those properties rather than for animation-name. Furthermore, when serializing, default values of other properties must be output in at least the cases necessary to distinguish an animation-name that could be a value of another property, and may be output in additional cases.
+
+The attribute setted as null are not printed in the compiled rule.
+
+If you need to add another animation to the library just fill the needed keyframes and make sure to give it a unique name.
+This can be done in this very file or in the file that invoke the specific animation mixin.
+
+Source: http://zerosixthree.se/8-sass-mixins-you-must-have-in-your-toolbox/
+
+*/
+/* 
+
+The pulse animation simulates a heart beating.
+It scales an element up, then down and then back to its original size, usually to try and canalize user attention to that element.
+
+*/
+@-webkit-keyframes animation--pulse {
+  0% {
+    -webkit-transform: scale(1); }
+  5% {
+    -webkit-transform: scale(0.9); }
+  10% {
+    -webkit-transform: scale(1.1); }
+  15% {
+    -webkit-transform: scale(0.8); }
+  20% {
+    -webkit-transform: scale(1); }
+  100% {
+    -webkit-transform: scale(1); } }
+@keyframes animation-pulse {
+  0% {
+    transform: scale(1); }
+  5% {
+    transform: scale(0.9); }
+  10% {
+    transform: scale(1.1); }
+  15% {
+    transform: scale(0.8); }
+  20% {
+    transform: scale(1); }
+  100% {
+    transform: scale(1); } }
+/*
+
+The translate animation gets an element and move it from its start to its ending either vertically or horizontally.
+It's usually used as an overlay to simulate some kind of progress bar.
+
+*/
+@keyframes animation--vertical-translate {
+  0% {
+    transform: translateY(100%); }
+  100% {
+    transform: translateY(-100%); } }
+@keyframes animation--horizontal-translate {
+  0% {
+    transform: translateX(100%); }
+  100% {
+    transform: translateX(-100%); } }
+/*
+
+The explosion animation gets and element and fade it out and shrinks it to zero dimension (invisible). Then it grows beyond its current dimension and fade out again.
+
+*/
+@keyframes animation--explosion {
+  0% {
+    transform: scale(0);
+    opacity: 0; }
+  30% {
+    opacity: 1; }
+  60% {
+    transform: scale(1.3); }
+  100% {
+    transform: scale(1);
+    opacity: 0; } }
+/* 480px */
+/* 960px */
+/* 961px */
+/* 1280px */
+/* 1281px */
+/* Copy colors */
+/* Dialog colors */
+/* Vertical ryhthm */
+/* Source: 
+	- http://www.smashingmagazine.com/2012/12/17/css-baseline-the-good-the-bad-and-the-ugly/
+	- http://24ways.org/2006/compose-to-a-vertical-rhythm/
+ */
+/* 62.5% = 1em = 10px */
+/*
+
+This mixin accepts infinite arguments and prefix those into the appropriate declinations.
+The arguments are to be passed with the same exact syntax as if you were writing a transition yourself.
+
+*/
+/* 480px */
+/* 960px */
+/* 961px */
+/* 1280px */
+/* 1281px */
+/* Copy colors */
+/* Dialog colors */
+/* Vertical ryhthm */
+/* Source: 
+	- http://www.smashingmagazine.com/2012/12/17/css-baseline-the-good-the-bad-and-the-ugly/
+	- http://24ways.org/2006/compose-to-a-vertical-rhythm/
+ */
+/* 62.5% = 1em = 10px */
 /* Horizontal */
 /* Last item right floated */
 /* Breadcrumb */
 /* Dashboard */
-/*  =======================================================
-
-		Table of content
-
-			* Imports
-
-			* Form
-
-	======================================================= */
-/*  =======================================================
-
-		Imports
-
-	=======================================================  */
-/*  =======================================================
-
-		Table of Content
-
-		* Media queries
-
-	======================================================= */
-/*  =======================================================
-
-		Media queries
-
-	======================================================= */
 /* 480px */
 /* 960px */
 /* 961px */
 /* 1280px */
 /* 1281px */
-/*  =======================================================
-
-		Table of Content
-
-			* Palette
-				- Main colors
-				- Dialog colors
-
-			* Typography
-
-	======================================================= */
-/*  =======================================================
-
-		Palette
-
-	=======================================================  */
 /* Copy colors */
 /* Dialog colors */
-/*  =======================================================
-
-		Typography
-
-	=======================================================  */
 /* Vertical ryhthm */
 /* Source: 
 	- http://www.smashingmagazine.com/2012/12/17/css-baseline-the-good-the-bad-and-the-ugly/
@@ -896,60 +433,13 @@ legend {
 	cursor: default;
 }
 */
-/*  =======================================================
-
-		Table of content
-
-			* Imports
-
-			* Tables
-
-	======================================================= */
-/*  =======================================================
-
-		Imports
-
-	=======================================================  */
-/*  =======================================================
-
-		Table of Content
-
-		* Media queries
-
-	======================================================= */
-/*  =======================================================
-
-		Media queries
-
-	======================================================= */
 /* 480px */
 /* 960px */
 /* 961px */
 /* 1280px */
 /* 1281px */
-/*  =======================================================
-
-		Table of Content
-
-			* Palette
-				- Main colors
-				- Dialog colors
-
-			* Typography
-
-	======================================================= */
-/*  =======================================================
-
-		Palette
-
-	=======================================================  */
 /* Copy colors */
 /* Dialog colors */
-/*  =======================================================
-
-		Typography
-
-	=======================================================  */
 /* Vertical ryhthm */
 /* Source: 
 	- http://www.smashingmagazine.com/2012/12/17/css-baseline-the-good-the-bad-and-the-ugly/
@@ -976,60 +466,13 @@ th {
   border-style: solid;
   border-color: #111; }
 
-/*  =======================================================
-
-		Table of content
-
-			* Imports
-
-			* Modals
-
-	======================================================= */
-/*  =======================================================
-
-		Imports
-
-	=======================================================  */
-/*  =======================================================
-
-		Table of Content
-
-		* Media queries
-
-	======================================================= */
-/*  =======================================================
-
-		Media queries
-
-	======================================================= */
 /* 480px */
 /* 960px */
 /* 961px */
 /* 1280px */
 /* 1281px */
-/*  =======================================================
-
-		Table of Content
-
-			* Palette
-				- Main colors
-				- Dialog colors
-
-			* Typography
-
-	======================================================= */
-/*  =======================================================
-
-		Palette
-
-	=======================================================  */
 /* Copy colors */
 /* Dialog colors */
-/*  =======================================================
-
-		Typography
-
-	=======================================================  */
 /* Vertical ryhthm */
 /* Source: 
 	- http://www.smashingmagazine.com/2012/12/17/css-baseline-the-good-the-bad-and-the-ugly/
@@ -1053,524 +496,1086 @@ th {
 	z-index: 10;
 }
 */
-/*  =======================================================
+/* 480px */
+/* 960px */
+/* 961px */
+/* 1280px */
+/* 1281px */
+/* Copy colors */
+/* Dialog colors */
+/* Vertical ryhthm */
+/* Source: 
+	- http://www.smashingmagazine.com/2012/12/17/css-baseline-the-good-the-bad-and-the-ugly/
+	- http://24ways.org/2006/compose-to-a-vertical-rhythm/
+ */
+/* 62.5% = 1em = 10px */
+/* Source: http://css-tricks.com/handling-z-index/ */
+/* Sources 
+	- http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code/
+	- http://philipwalton.github.io/solved-by-flexbox/demos/media-object/
+*/
+/* Sources: http://nicolasgallagher.com/micro-clearfix-hack/ */
+/* Sources:
+	- http://www.mademyday.de/css-height-equals-width-with-pure-css.html
+	- http://alistapart.com/article/creating-intrinsic-ratios-for-video
+*/
+/*  Demo: http://codepen.io/dannygiolo/pen/awEjq */
+/* 480px */
+/* 960px */
+/* 961px */
+/* 1280px */
+/* 1281px */
+/* Copy colors */
+/* Dialog colors */
+/* Vertical ryhthm */
+/* Source: 
+	- http://www.smashingmagazine.com/2012/12/17/css-baseline-the-good-the-bad-and-the-ugly/
+	- http://24ways.org/2006/compose-to-a-vertical-rhythm/
+ */
+/* 62.5% = 1em = 10px */
+/*  
+
+	This technique consists in giving the the same font-family name multiple times, setting the weights and styles in each @font-face declaration to match the weight and style of the Web font file being accessed.	
+
+	Drawbacks
+		- crashes iPad1 and BlackBerry 9900
+		- compatible up to IE7
+		- if you use more than four weights and styles on the website, 
+			IE 7 and 8 will convert all light and medium weights to normal,
+			and all black and heavy weights to bold.
 	
-		Table of content
+	Sources 
+		- http://coding.smashingmagazine.com/2013/02/14/setting-weights-and-styles-at-font-face-declaration/
+		
+*/
+@font-face {
+  font-family: 'Webfont';
+  src: url("webfont-light.eot");
+  src: url("webfont-light.eot?#iefix") format("embedded-opentype"), url("webfont-light.woff") format("woff"), url("webfont-light.ttf") format("truetype"), url("webfont-light.svg#WebfontLight") format("svg");
+  font-weight: 300;
+  font-style: normal; }
+@font-face {
+  font-family: 'Webfont';
+  src: url("webfont-light-italic.eot");
+  src: url("webfont-light-italic.eot?#iefix") format("embedded-opentype"), url("webfont-light-italic.woff") format("woff"), url("webfont-light-italic.ttf") format("truetype"), url("webfont-light-italic.svg#WebfontLightItalic") format("svg");
+  font-weight: 300;
+  font-style: italic; }
+@font-face {
+  font-family: 'Webfont';
+  src: url("webfont-regular.eot");
+  src: url("webfont-regular.eot?#iefix") format("embedded-opentype"), url("webfont-regular.woff") format("woff"), url("webfont-regular.ttf") format("truetype"), url("webfont-regular.svg#WebfontRegular") format("svg");
+  font-weight: 400;
+  font-style: normal; }
+@font-face {
+  font-family: 'Webfont';
+  src: url("webfont-bold.eot");
+  src: url("webfont-bold.eot?#iefix") format("embedded-opentype"), url("webfont-bold.woff") format("woff"), url("webfont-bold.ttf") format("truetype"), url("webfont-bold.svg#WebfontBold") format("svg");
+  font-weight: 700;
+  font-style: normal; }
+/* Additional classes for style linking */
+.font-300 {
+  font-family: 'Webfont', arial, sans-serif;
+  font-weight: 300;
+  font-style: normal; }
 
-			* Imports
+.font-300-italic {
+  font-family: 'Webfont', arial, sans-serif;
+  font-weight: 300;
+  font-style: italic; }
 
-			* Viewport units
-	  
-	======================================================= */
-/*  =======================================================
+.font-400 {
+  font-family: 'Webfont', arial, sans-serif;
+  font-weight: 400;
+  font-style: normal; }
 
-		Imports
+.font-700 {
+  font-family: 'Webfont', arial, sans-serif;
+  font-weight: 700;
+  font-style: normal; }
 
-	=======================================================  */
-/*  =======================================================
-
-		Table of Content
-
-		* Media queries
-
-	======================================================= */
-/*  =======================================================
-
-		Media queries
-
-	======================================================= */
 /* 480px */
 /* 960px */
 /* 961px */
 /* 1280px */
 /* 1281px */
-/*  =======================================================
-
-		Table of Content
-
-			* Palette
-				- Main colors
-				- Dialog colors
-
-			* Typography
-
-	======================================================= */
-/*  =======================================================
-
-		Palette
-
-	=======================================================  */
 /* Copy colors */
 /* Dialog colors */
-/*  =======================================================
-
-		Typography
-
-	=======================================================  */
 /* Vertical ryhthm */
 /* Source: 
 	- http://www.smashingmagazine.com/2012/12/17/css-baseline-the-good-the-bad-and-the-ugly/
 	- http://24ways.org/2006/compose-to-a-vertical-rhythm/
  */
 /* 62.5% = 1em = 10px */
-/*  =======================================================
+/*
 
-		Viewport units
+*** _components.scss contains the classes and mixins that are not going to be use by themeselves, but as the name suggests as components for more complex objects.
 
-	======================================================= */
-/* These mixins accept a unitless value */
-/*  =======================================================
+*/
+/* 
 
-		Table of content
+This mixin is the fundamental block of all css in the sportteller project.
+Its job is to recieved unitless value so that it can translate those value into viewport units based on device orientation.
+This approach let us abandon all others media queries in terms of resizing for different viewports as all elements resize and scale automatically based on which side of the viewport is bigger.
 
-			* Imports
-
-			* Includes common
-
-	======================================================= */
-/*  =======================================================
-
-		Imports
-
-	=======================================================  */
-/*  =======================================================
-
-		Table of content
-
-			* Imports
-
-			* Header
-
-	======================================================= */
-/*  =======================================================
-
-		Imports
-
-	=======================================================  */
-/*  =======================================================
-
-		Table of Content
-
-		* Media queries
-
-	======================================================= */
-/*  =======================================================
-
-		Media queries
-
-	======================================================= */
+*/
 /* 480px */
 /* 960px */
 /* 961px */
 /* 1280px */
 /* 1281px */
-/*  =======================================================
-
-		Table of Content
-
-			* Palette
-				- Main colors
-				- Dialog colors
-
-			* Typography
-
-	======================================================= */
-/*  =======================================================
-
-		Palette
-
-	=======================================================  */
 /* Copy colors */
 /* Dialog colors */
-/*  =======================================================
-
-		Typography
-
-	=======================================================  */
 /* Vertical ryhthm */
 /* Source: 
 	- http://www.smashingmagazine.com/2012/12/17/css-baseline-the-good-the-bad-and-the-ugly/
 	- http://24ways.org/2006/compose-to-a-vertical-rhythm/
  */
 /* 62.5% = 1em = 10px */
-/*  =======================================================
+/*
 
-		Header
+This template is a two step mixin and it's used to invoke any animation and its keyframes.
 
-	=======================================================  */
-/*  =======================================================
+When calling this mixin the order is important within each animation definition: the first value that can be parsed as a <time> is assigned to the animation-duration, and the second one is assigned to animation-delay.
 
-		Table of content
+Note that order is also for distinguishing animation-name values from other keywords.
+When parsing, keywords that are valid for properties other than animation-name whose values were not found earlier in the shorthand must be accepted for those properties rather than for animation-name. Furthermore, when serializing, default values of other properties must be output in at least the cases necessary to distinguish an animation-name that could be a value of another property, and may be output in additional cases.
 
-			* Imports
+The attribute setted as null are not printed in the compiled rule.
 
-			* Main nav
+If you need to add another animation to the library just fill the needed keyframes and make sure to give it a unique name.
+This can be done in this very file or in the file that invoke the specific animation mixin.
 
-	======================================================= */
-/*  =======================================================
+Source: http://zerosixthree.se/8-sass-mixins-you-must-have-in-your-toolbox/
 
-		Imports
+*/
+/* 
 
-	=======================================================  */
-/*  =======================================================
+The pulse animation simulates a heart beating.
+It scales an element up, then down and then back to its original size, usually to try and canalize user attention to that element.
 
-		Table of Content
+*/
+@-webkit-keyframes animation--pulse {
+  0% {
+    -webkit-transform: scale(1); }
+  5% {
+    -webkit-transform: scale(0.9); }
+  10% {
+    -webkit-transform: scale(1.1); }
+  15% {
+    -webkit-transform: scale(0.8); }
+  20% {
+    -webkit-transform: scale(1); }
+  100% {
+    -webkit-transform: scale(1); } }
+@keyframes animation-pulse {
+  0% {
+    transform: scale(1); }
+  5% {
+    transform: scale(0.9); }
+  10% {
+    transform: scale(1.1); }
+  15% {
+    transform: scale(0.8); }
+  20% {
+    transform: scale(1); }
+  100% {
+    transform: scale(1); } }
+/*
 
-		* Media queries
+The translate animation gets an element and move it from its start to its ending either vertically or horizontally.
+It's usually used as an overlay to simulate some kind of progress bar.
 
-	======================================================= */
-/*  =======================================================
+*/
+@keyframes animation--vertical-translate {
+  0% {
+    transform: translateY(100%); }
+  100% {
+    transform: translateY(-100%); } }
+@keyframes animation--horizontal-translate {
+  0% {
+    transform: translateX(100%); }
+  100% {
+    transform: translateX(-100%); } }
+/*
 
-		Media queries
+The explosion animation gets and element and fade it out and shrinks it to zero dimension (invisible). Then it grows beyond its current dimension and fade out again.
 
-	======================================================= */
+*/
+@keyframes animation--explosion {
+  0% {
+    transform: scale(0);
+    opacity: 0; }
+  30% {
+    opacity: 1; }
+  60% {
+    transform: scale(1.3); }
+  100% {
+    transform: scale(1);
+    opacity: 0; } }
 /* 480px */
 /* 960px */
 /* 961px */
 /* 1280px */
 /* 1281px */
-/*  =======================================================
-
-		Table of Content
-
-			* Palette
-				- Main colors
-				- Dialog colors
-
-			* Typography
-
-	======================================================= */
-/*  =======================================================
-
-		Palette
-
-	=======================================================  */
 /* Copy colors */
 /* Dialog colors */
-/*  =======================================================
-
-		Typography
-
-	=======================================================  */
 /* Vertical ryhthm */
 /* Source: 
 	- http://www.smashingmagazine.com/2012/12/17/css-baseline-the-good-the-bad-and-the-ugly/
 	- http://24ways.org/2006/compose-to-a-vertical-rhythm/
  */
 /* 62.5% = 1em = 10px */
-/*  =======================================================
+/*
 
-		Main nav
+This mixin accepts infinite arguments and prefix those into the appropriate declinations.
+The arguments are to be passed with the same exact syntax as if you were writing a transition yourself.
 
-	=======================================================  */
-/*  =======================================================
-
-		Table of content
-
-			* Imports
-
-			* Footer
-
-	======================================================= */
-/*  =======================================================
-
-		Imports
-
-	=======================================================  */
-/*  =======================================================
-
-		Table of Content
-
-		* Media queries
-
-	======================================================= */
-/*  =======================================================
-
-		Media queries
-
-	======================================================= */
+*/
 /* 480px */
 /* 960px */
 /* 961px */
 /* 1280px */
 /* 1281px */
-/*  =======================================================
-
-		Table of Content
-
-			* Palette
-				- Main colors
-				- Dialog colors
-
-			* Typography
-
-	======================================================= */
-/*  =======================================================
-
-		Palette
-
-	=======================================================  */
 /* Copy colors */
 /* Dialog colors */
-/*  =======================================================
-
-		Typography
-
-	=======================================================  */
 /* Vertical ryhthm */
 /* Source: 
 	- http://www.smashingmagazine.com/2012/12/17/css-baseline-the-good-the-bad-and-the-ugly/
 	- http://24ways.org/2006/compose-to-a-vertical-rhythm/
  */
 /* 62.5% = 1em = 10px */
-/*  =======================================================
-
-		Footer
-
-	=======================================================  */
-/*  =======================================================
-
-		Includes common
-
-	=======================================================  */
-/*  =======================================================
-
-		Table of content
-
-			* Imports
-
-			* Sections common
-
-	======================================================= */
-/*  =======================================================
-
-		Imports
-
-	=======================================================  */
-/*  =======================================================
-
-		Table of content
-
-			* Imports
-
-			* Home
-
-	======================================================= */
-/*  =======================================================
-
-		Imports
-
-	=======================================================  */
-/*  =======================================================
-
-		Table of Content
-
-		* Media queries
-
-	======================================================= */
-/*  =======================================================
-
-		Media queries
-
-	======================================================= */
+/* Horizontal */
+/* Last item right floated */
+/* Breadcrumb */
+/* Dashboard */
 /* 480px */
 /* 960px */
 /* 961px */
 /* 1280px */
 /* 1281px */
-/*  =======================================================
-
-		Table of Content
-
-			* Palette
-				- Main colors
-				- Dialog colors
-
-			* Typography
-
-	======================================================= */
-/*  =======================================================
-
-		Palette
-
-	=======================================================  */
 /* Copy colors */
 /* Dialog colors */
-/*  =======================================================
-
-		Typography
-
-	=======================================================  */
 /* Vertical ryhthm */
 /* Source: 
 	- http://www.smashingmagazine.com/2012/12/17/css-baseline-the-good-the-bad-and-the-ugly/
 	- http://24ways.org/2006/compose-to-a-vertical-rhythm/
  */
 /* 62.5% = 1em = 10px */
-/*  =======================================================
+/*  ========================================================
 
-		Home
+		Reset
 
-	=======================================================  */
-/*  =======================================================
+	======================================================== */
+/* to be reviewd
+fieldset {
+	padding: 1em;
+}
 
-		Sections common
+legend {
+	padding: 0 .5em;
+}
+ 
+.form--row {
+	margin-top: 1em;
+}
 
-	=======================================================  */
-/*  =======================================================
+.form--row:first-child {
+	margin-top: 0;
+}
 
-		Table of content
+[class^="form--id"],
+[class^="form--pw"] {
+	display: inline-block;
+	background: green;
+}
 
-			* Imports
+.form--id-label,
+.form--pw-label {
+	min-width: 5em;
+}
 
-			* Skin common
+.form--id-input,
+.form--pw-input {
+	min-width: 20em;
+}
 
-	======================================================= */
-/*  =======================================================
+.form--textarea-label {
+	vertical-align: top;
+}
 
-		Imports
-
-	=======================================================  */
-/*  =======================================================
-
-		Table of content
-
-			* Imports
-
-	  		* Matrix
-
-	  		* Sprite
-
-			* Icons position
-
-	======================================================= */
-/*  =======================================================
-
-		Imports
-
-	======================================================= */
-/*  =======================================================
-
-		Table of Content
-
-		* Media queries
-
-	======================================================= */
-/*  =======================================================
-
-		Media queries
-
-	======================================================= */
+.form--button-disabled {
+	opacity: 0.5;
+	cursor: default;
+}
+*/
 /* 480px */
 /* 960px */
 /* 961px */
 /* 1280px */
 /* 1281px */
-/*  =======================================================
-
-		Table of Content
-
-			* Palette
-				- Main colors
-				- Dialog colors
-
-			* Typography
-
-	======================================================= */
-/*  =======================================================
-
-		Palette
-
-	=======================================================  */
 /* Copy colors */
 /* Dialog colors */
-/*  =======================================================
-
-		Typography
-
-	=======================================================  */
 /* Vertical ryhthm */
 /* Source: 
 	- http://www.smashingmagazine.com/2012/12/17/css-baseline-the-good-the-bad-and-the-ugly/
 	- http://24ways.org/2006/compose-to-a-vertical-rhythm/
  */
 /* 62.5% = 1em = 10px */
-/*  =======================================================
+/*  ========================================================
 
-		Matrix
-
-	======================================================= */
-/*  =======================================================
-
-		Sprite
-
-	======================================================= */
-/* Common style for all versions */
-.icon::before {
-  content: "";
-  background-image: url("../img/icons/sprite.svg");
-  background-repeat: no-repeat; }
-
-/*  =======================================================
-
-		Icons position
-
-	======================================================= */
-/*  =======================================================
-
-		Table of content
-
-			* Imports
-
-	======================================================= */
-/*  =======================================================
-
-		Imports
+		Tables
 
 	=======================================================  */
-/*  =======================================================
+table {
+  width: 100%;
+  border-spacing: 0;
+  border-collapse: collapse;
+  margin-top: 1em; }
 
-		Table of Content
+table:first-child {
+  margin-top: 0; }
 
-			* Palette
-				- Main colors
-				- Dialog colors
+td,
+th {
+  border-width: 1px;
+  border-style: solid;
+  border-color: #111; }
 
-			* Typography
-
-	======================================================= */
-/*  =======================================================
-
-		Palette
-
-	=======================================================  */
+/* 480px */
+/* 960px */
+/* 961px */
+/* 1280px */
+/* 1281px */
 /* Copy colors */
 /* Dialog colors */
-/*  =======================================================
-
-		Typography
-
-	=======================================================  */
 /* Vertical ryhthm */
 /* Source: 
 	- http://www.smashingmagazine.com/2012/12/17/css-baseline-the-good-the-bad-and-the-ugly/
 	- http://24ways.org/2006/compose-to-a-vertical-rhythm/
  */
 /* 62.5% = 1em = 10px */
-/*  =======================================================
+/*  ========================================================
 
-		Table of Content
-
-	======================================================= */
-/*  =======================================================
-
-		Skin common
+		Modals
 
 	=======================================================  */
-/*  =======================================================
+/* to be reviewd 
+.modal-win {
+	position: fixed;
+	width: 30em;
+	height: 30em;
+	top: -50%;
+	left: 50%;
+	margin: -15em 0 0 -15em;
+	background-color: #fff;
+	z-index: 10;
+}
+*/
+/* 480px */
+/* 960px */
+/* 961px */
+/* 1280px */
+/* 1281px */
+/* Copy colors */
+/* Dialog colors */
+/* Vertical ryhthm */
+/* Source: 
+	- http://www.smashingmagazine.com/2012/12/17/css-baseline-the-good-the-bad-and-the-ugly/
+	- http://24ways.org/2006/compose-to-a-vertical-rhythm/
+ */
+/* 62.5% = 1em = 10px */
+/* Source: http://css-tricks.com/handling-z-index/ */
+/* Sources 
+	- http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code/
+	- http://philipwalton.github.io/solved-by-flexbox/demos/media-object/
+*/
+/* Sources: http://nicolasgallagher.com/micro-clearfix-hack/ */
+/* Sources:
+	- http://www.mademyday.de/css-height-equals-width-with-pure-css.html
+	- http://alistapart.com/article/creating-intrinsic-ratios-for-video
+*/
+/*  Demo: http://codepen.io/dannygiolo/pen/awEjq */
+/* 
 
-		Dev style
+Confused on what to use between px, em and rem?
+Read on: http://j.eremy.net/confused-about-rem-and-em/ */
+html {
+  font-size: 62.5%;
+  line-height: 1.4;
+  font-family: sans-serif;
+  color: black; }
+
+/* Size */
+h1 {
+  font-size: 2.5em; }
+
+h2 {
+  font-size: 1.5em; }
+
+h3 {
+  font-size: 1.3125em; }
+
+h4 {
+  font-size: 1.125em; }
+
+h5 {
+  font-size: 1em; }
+
+h6 {
+  font-size: 1em; }
+
+p {
+  font-size: 1em; }
+
+q {
+  font-size: 1em; }
+
+/* Color */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: black; }
+
+/* 480px */
+/* 960px */
+/* 961px */
+/* 1280px */
+/* 1281px */
+/* Copy colors */
+/* Dialog colors */
+/* Vertical ryhthm */
+/* Source: 
+	- http://www.smashingmagazine.com/2012/12/17/css-baseline-the-good-the-bad-and-the-ugly/
+	- http://24ways.org/2006/compose-to-a-vertical-rhythm/
+ */
+/* 62.5% = 1em = 10px */
+/* Typography increment to keep the best word per line ratio */
+/* Source: http://trentwalton.com/2012/06/19/fluid-type/ */
+/* Tablets plus base desktops/laptops */
+@media (min-width: 30rem) and (max-width: 60rem) {
+  body {
+    font-size: 1.1em; } }
+/* Desktops */
+@media (min-width: 60.0625rem) and (max-width: 80rem) {
+  body {
+    font-size: 1.25em; } }
+/* Big screen monitors/TVs */
+@media (min-width: 80.0625rem) {
+  body {
+    font-size: 1.5em; } }
+/* 480px */
+/* 960px */
+/* 961px */
+/* 1280px */
+/* 1281px */
+/* Copy colors */
+/* Dialog colors */
+/* Vertical ryhthm */
+/* Source: 
+	- http://www.smashingmagazine.com/2012/12/17/css-baseline-the-good-the-bad-and-the-ugly/
+	- http://24ways.org/2006/compose-to-a-vertical-rhythm/
+ */
+/* 62.5% = 1em = 10px */
+q::before {
+  content: open-quote; }
+q::after {
+  content: close-quote; }
+
+:lang(af) .st-copy--quote {
+  quotes: '\201E' '\201D' '\201A' '\2019'; }
+
+:lang(bg) .st-copy--quote {
+  quotes: '\201E' '\201C' '\201A' '\2018'; }
+
+:lang(cs) .st-copy--quote {
+  quotes: '\201E' '\201C' '\201A' '\2018'; }
+
+:lang(da) .st-copy--quote {
+  quotes: '\00BB' '\00AB' '\203A' '\2039'; }
+
+:lang(de) .st-copy--quote {
+  quotes: '\201E' '\201C' '\201A' '\2018'; }
+
+:lang(el) .st-copy--quote {
+  quotes: '\00AB' '\00BB' '\2039' '\203A'; }
+
+:lang(en-GB) .st-copy--quote {
+  quotes: '\2018' '\2019' '\201C' '\201D'; }
+
+:lang(es) .st-copy--quote {
+  quotes: '\00AB' '\00BB' '\2039' '\203A'; }
+
+:lang(fi) .st-copy--quote {
+  quotes: '\201D' '\201D' '\2019' '\2019'; }
+
+:lang(fr) .st-copy--quote {
+  quotes: '\ab\2005' '\2005\bb' '\2039\2005' '\2005\203a'; }
+
+:lang(hr) .st-copy--quote {
+  quotes: '\00BB' '\00AB' '\203A' '\2039'; }
+
+:lang(is) .st-copy--quote {
+  quotes: '\201E' '\201C' '\201A' '\2018'; }
+
+:lang(lt) .st-copy--quote {
+  quotes: '\201E' '\201C' '\201A' '\2018'; }
+
+:lang(nl) .st-copy--quote {
+  quotes: '\201E' '\201D' '\201A' '\2019'; }
+
+:lang(pl) .st-copy--quote {
+  quotes: '\201E' '\201D' '\201A' '\2019'; }
+
+:lang(ro) .st-copy--quote {
+  quotes: '\201E' '\201C' '\201A' '\2018'; }
+
+:lang(sk) .st-copy--quote {
+  quotes: '\201E' '\201C' '\201A' '\2018'; }
+
+:lang(sq) .st-copy--quote {
+  quotes: '\00AB' '\00BB' '\2039' '\203A'; }
+
+:lang(sr) .st-copy--quote {
+  quotes: '\201E' '\201C' '\201A' '\2018'; }
+
+:lang(sv) .st-copy--quote {
+  quotes: '\201D' '\201D' '\2019' '\2019'; }
+
+:lang(tr) .st-copy--quote {
+  quotes: '\00AB' '\00BB' '\2039' '\203A'; }
+
+:lang(ru) .st-copy--quote {
+  quotes: '\00AB' '\00BB' '\201E' '\201C'; }
+
+/*
+
+*** _components.scss contains the classes and mixins that are not going to be use by themeselves, but as the name suggests as components for more complex objects.
+
+*/
+/* 
+
+This mixin is the fundamental block of all css in the sportteller project.
+Its job is to recieved unitless value so that it can translate those value into viewport units based on device orientation.
+This approach let us abandon all others media queries in terms of resizing for different viewports as all elements resize and scale automatically based on which side of the viewport is bigger.
+
+*/
+/* 480px */
+/* 960px */
+/* 961px */
+/* 1280px */
+/* 1281px */
+/* Copy colors */
+/* Dialog colors */
+/* Vertical ryhthm */
+/* Source: 
+	- http://www.smashingmagazine.com/2012/12/17/css-baseline-the-good-the-bad-and-the-ugly/
+	- http://24ways.org/2006/compose-to-a-vertical-rhythm/
+ */
+/* 62.5% = 1em = 10px */
+/*
+
+This template is a two step mixin and it's used to invoke any animation and its keyframes.
+
+When calling this mixin the order is important within each animation definition: the first value that can be parsed as a <time> is assigned to the animation-duration, and the second one is assigned to animation-delay.
+
+Note that order is also for distinguishing animation-name values from other keywords.
+When parsing, keywords that are valid for properties other than animation-name whose values were not found earlier in the shorthand must be accepted for those properties rather than for animation-name. Furthermore, when serializing, default values of other properties must be output in at least the cases necessary to distinguish an animation-name that could be a value of another property, and may be output in additional cases.
+
+The attribute setted as null are not printed in the compiled rule.
+
+If you need to add another animation to the library just fill the needed keyframes and make sure to give it a unique name.
+This can be done in this very file or in the file that invoke the specific animation mixin.
+
+Source: http://zerosixthree.se/8-sass-mixins-you-must-have-in-your-toolbox/
+
+*/
+/* 
+
+The pulse animation simulates a heart beating.
+It scales an element up, then down and then back to its original size, usually to try and canalize user attention to that element.
+
+*/
+@-webkit-keyframes animation--pulse {
+  0% {
+    -webkit-transform: scale(1); }
+  5% {
+    -webkit-transform: scale(0.9); }
+  10% {
+    -webkit-transform: scale(1.1); }
+  15% {
+    -webkit-transform: scale(0.8); }
+  20% {
+    -webkit-transform: scale(1); }
+  100% {
+    -webkit-transform: scale(1); } }
+@keyframes animation-pulse {
+  0% {
+    transform: scale(1); }
+  5% {
+    transform: scale(0.9); }
+  10% {
+    transform: scale(1.1); }
+  15% {
+    transform: scale(0.8); }
+  20% {
+    transform: scale(1); }
+  100% {
+    transform: scale(1); } }
+/*
+
+The translate animation gets an element and move it from its start to its ending either vertically or horizontally.
+It's usually used as an overlay to simulate some kind of progress bar.
+
+*/
+@keyframes animation--vertical-translate {
+  0% {
+    transform: translateY(100%); }
+  100% {
+    transform: translateY(-100%); } }
+@keyframes animation--horizontal-translate {
+  0% {
+    transform: translateX(100%); }
+  100% {
+    transform: translateX(-100%); } }
+/*
+
+The explosion animation gets and element and fade it out and shrinks it to zero dimension (invisible). Then it grows beyond its current dimension and fade out again.
+
+*/
+@keyframes animation--explosion {
+  0% {
+    transform: scale(0);
+    opacity: 0; }
+  30% {
+    opacity: 1; }
+  60% {
+    transform: scale(1.3); }
+  100% {
+    transform: scale(1);
+    opacity: 0; } }
+/* 480px */
+/* 960px */
+/* 961px */
+/* 1280px */
+/* 1281px */
+/* Copy colors */
+/* Dialog colors */
+/* Vertical ryhthm */
+/* Source: 
+	- http://www.smashingmagazine.com/2012/12/17/css-baseline-the-good-the-bad-and-the-ugly/
+	- http://24ways.org/2006/compose-to-a-vertical-rhythm/
+ */
+/* 62.5% = 1em = 10px */
+/*
+
+This mixin accepts infinite arguments and prefix those into the appropriate declinations.
+The arguments are to be passed with the same exact syntax as if you were writing a transition yourself.
+
+*/
+/* 480px */
+/* 960px */
+/* 961px */
+/* 1280px */
+/* 1281px */
+/* Copy colors */
+/* Dialog colors */
+/* Vertical ryhthm */
+/* Source: 
+	- http://www.smashingmagazine.com/2012/12/17/css-baseline-the-good-the-bad-and-the-ugly/
+	- http://24ways.org/2006/compose-to-a-vertical-rhythm/
+ */
+/* 62.5% = 1em = 10px */
+/* Horizontal */
+/* Last item right floated */
+/* Breadcrumb */
+/* Dashboard */
+/* 480px */
+/* 960px */
+/* 961px */
+/* 1280px */
+/* 1281px */
+/* Copy colors */
+/* Dialog colors */
+/* Vertical ryhthm */
+/* Source: 
+	- http://www.smashingmagazine.com/2012/12/17/css-baseline-the-good-the-bad-and-the-ugly/
+	- http://24ways.org/2006/compose-to-a-vertical-rhythm/
+ */
+/* 62.5% = 1em = 10px */
+/*  ========================================================
+
+		Reset
+
+	======================================================== */
+/* to be reviewd
+fieldset {
+	padding: 1em;
+}
+
+legend {
+	padding: 0 .5em;
+}
+ 
+.form--row {
+	margin-top: 1em;
+}
+
+.form--row:first-child {
+	margin-top: 0;
+}
+
+[class^="form--id"],
+[class^="form--pw"] {
+	display: inline-block;
+	background: green;
+}
+
+.form--id-label,
+.form--pw-label {
+	min-width: 5em;
+}
+
+.form--id-input,
+.form--pw-input {
+	min-width: 20em;
+}
+
+.form--textarea-label {
+	vertical-align: top;
+}
+
+.form--button-disabled {
+	opacity: 0.5;
+	cursor: default;
+}
+*/
+/* 480px */
+/* 960px */
+/* 961px */
+/* 1280px */
+/* 1281px */
+/* Copy colors */
+/* Dialog colors */
+/* Vertical ryhthm */
+/* Source: 
+	- http://www.smashingmagazine.com/2012/12/17/css-baseline-the-good-the-bad-and-the-ugly/
+	- http://24ways.org/2006/compose-to-a-vertical-rhythm/
+ */
+/* 62.5% = 1em = 10px */
+/*  ========================================================
+
+		Tables
 
 	=======================================================  */
+table {
+  width: 100%;
+  border-spacing: 0;
+  border-collapse: collapse;
+  margin-top: 1em; }
+
+table:first-child {
+  margin-top: 0; }
+
+td,
+th {
+  border-width: 1px;
+  border-style: solid;
+  border-color: #111; }
+
+/* 480px */
+/* 960px */
+/* 961px */
+/* 1280px */
+/* 1281px */
+/* Copy colors */
+/* Dialog colors */
+/* Vertical ryhthm */
+/* Source: 
+	- http://www.smashingmagazine.com/2012/12/17/css-baseline-the-good-the-bad-and-the-ugly/
+	- http://24ways.org/2006/compose-to-a-vertical-rhythm/
+ */
+/* 62.5% = 1em = 10px */
+/*  ========================================================
+
+		Modals
+
+	=======================================================  */
+/* to be reviewd 
+.modal-win {
+	position: fixed;
+	width: 30em;
+	height: 30em;
+	top: -50%;
+	left: 50%;
+	margin: -15em 0 0 -15em;
+	background-color: #fff;
+	z-index: 10;
+}
+*/
+/* 480px */
+/* 960px */
+/* 961px */
+/* 1280px */
+/* 1281px */
+/* Copy colors */
+/* Dialog colors */
+/* Vertical ryhthm */
+/* Source: 
+	- http://www.smashingmagazine.com/2012/12/17/css-baseline-the-good-the-bad-and-the-ugly/
+	- http://24ways.org/2006/compose-to-a-vertical-rhythm/
+ */
+/* 62.5% = 1em = 10px */
+/* Source: http://css-tricks.com/handling-z-index/ */
+/* Sources 
+	- http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code/
+	- http://philipwalton.github.io/solved-by-flexbox/demos/media-object/
+*/
+/* Sources: http://nicolasgallagher.com/micro-clearfix-hack/ */
+/* Sources:
+	- http://www.mademyday.de/css-height-equals-width-with-pure-css.html
+	- http://alistapart.com/article/creating-intrinsic-ratios-for-video
+*/
+/*  Demo: http://codepen.io/dannygiolo/pen/awEjq */
+/* 480px */
+/* 960px */
+/* 961px */
+/* 1280px */
+/* 1281px */
+/* Copy colors */
+/* Dialog colors */
+/* Vertical ryhthm */
+/* Source: 
+	- http://www.smashingmagazine.com/2012/12/17/css-baseline-the-good-the-bad-and-the-ugly/
+	- http://24ways.org/2006/compose-to-a-vertical-rhythm/
+ */
+/* 62.5% = 1em = 10px */
+/* 480px */
+/* 960px */
+/* 961px */
+/* 1280px */
+/* 1281px */
+/* Copy colors */
+/* Dialog colors */
+/* Vertical ryhthm */
+/* Source: 
+	- http://www.smashingmagazine.com/2012/12/17/css-baseline-the-good-the-bad-and-the-ugly/
+	- http://24ways.org/2006/compose-to-a-vertical-rhythm/
+ */
+/* 62.5% = 1em = 10px */
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+body {
+  font-family: sans-serif; }
+
+/* ---- grid ---- */
+.grid {
+  background: #EEE;
+  max-width: 1200px; }
+
+/* clearfix */
+.grid:after {
+  content: '';
+  display: block;
+  clear: both; }
+
+/* ---- grid-item ---- */
+.grid-item {
+  width: 100px;
+  height: 100px;
+  float: left;
+  background: #D26;
+  border: 2px solid #333;
+  border-color: rgba(0, 0, 0, 0.5);
+  border-radius: 5px; }
+
+.grid-item--width2 {
+  width: 200px; }
+
+.grid-item--width3 {
+  width: 300px; }
+
+.grid-item--width4 {
+  width: 400px; }
+
+.grid-item--width5 {
+  width: 500px; }
+
+.grid-item--width6 {
+  width: 600px; }
+
+.grid-item--height2 {
+  height: 200px; }
+
+.grid-item--height3 {
+  height: 300px; }
+
+.grid-item--height4 {
+  height: 400px; }
+
+.grid-item--height5 {
+  height: 500px; }
+
+.grid-item--height6 {
+  height: 600px; }
+
+/* 480px */
+/* 960px */
+/* 961px */
+/* 1280px */
+/* 1281px */
+/* Copy colors */
+/* Dialog colors */
+/* Vertical ryhthm */
+/* Source: 
+	- http://www.smashingmagazine.com/2012/12/17/css-baseline-the-good-the-bad-and-the-ugly/
+	- http://24ways.org/2006/compose-to-a-vertical-rhythm/
+ */
+/* 62.5% = 1em = 10px */
+/* 480px */
+/* 960px */
+/* 961px */
+/* 1280px */
+/* 1281px */
+/* Copy colors */
+/* Dialog colors */
+/* Vertical ryhthm */
+/* Source: 
+	- http://www.smashingmagazine.com/2012/12/17/css-baseline-the-good-the-bad-and-the-ugly/
+	- http://24ways.org/2006/compose-to-a-vertical-rhythm/
+ */
+/* 62.5% = 1em = 10px */
+/* 480px */
+/* 960px */
+/* 961px */
+/* 1280px */
+/* 1281px */
+/* Copy colors */
+/* Dialog colors */
+/* Vertical ryhthm */
+/* Source: 
+	- http://www.smashingmagazine.com/2012/12/17/css-baseline-the-good-the-bad-and-the-ugly/
+	- http://24ways.org/2006/compose-to-a-vertical-rhythm/
+ */
+/* 62.5% = 1em = 10px */
+html::before {
+  content: "Mobile mq: less than 30rem";
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: .5em;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  text-align: center; }
+
+@media (min-width: 30rem) and (max-width: 60rem) {
+  html::before {
+    content: "Tablet mq: between 30rem and 60rem"; } }
+@media (min-width: 60.0625rem) and (max-width: 80rem) {
+  html::before {
+    content: "Desktop mq: between 60.0625rem and 80rem"; } }
+@media (min-width: 80.0625rem) {
+  html::before {
+    content: "Bigscreen mq: more than 80.0625rem"; } }
+/* 480px */
+/* 960px */
+/* 961px */
+/* 1280px */
+/* 1281px */
+/* Copy colors */
+/* Dialog colors */
+/* Vertical ryhthm */
+/* Source: 
+	- http://www.smashingmagazine.com/2012/12/17/css-baseline-the-good-the-bad-and-the-ugly/
+	- http://24ways.org/2006/compose-to-a-vertical-rhythm/
+ */
+/* 62.5% = 1em = 10px */
+/* Empty */
+*:empty {
+  padding: 0.5em;
+  background: gold; }
+
+*[class=""],
+*[id=""] {
+  outline: 5px dotted #ff3700; }
+
+/* Deprecated */
+*[style],
+font,
+center {
+  outline: 5px solid #ff3700; }
+
+/* Images */
+img[alt=""] {
+  outline: 3px dotted gold; }
+
+img:not([alt]) {
+  outline: 5px solid gold; }
+
+img[title=""] {
+  outline: 3px dotted gold; }
+
+img:not([title]) {
+  outline: 5px solid gold; }
+
+/* Tables */
+table:not([summary]) {
+  outline: 5px solid #ff3700; }
+
+table[summary=""] {
+  outline: 3px dotted #ff3700; }
+
+th {
+  background-color: #ff3700; }
+
+th[scope="col"],
+th[scope="row"] {
+  background-color: none; }
+
+/* Links */
+a[href]:not([title]) {
+  outline: 5px solid #ff3700; }
+
+a[title=""] {
+  outline: 3px dotted #ff3700; }
+
+a[href="#"] {
+  background: gold; }
+
+a[href=""] {
+  background: gold; }
+
+/* 480px */
+/* 960px */
+/* 961px */
+/* 1280px */
+/* 1281px */
+/* Copy colors */
+/* Dialog colors */
+/* Vertical ryhthm */
+/* Source: 
+	- http://www.smashingmagazine.com/2012/12/17/css-baseline-the-good-the-bad-and-the-ugly/
+	- http://24ways.org/2006/compose-to-a-vertical-rhythm/
+ */
+/* 62.5% = 1em = 10px */
+/* Copy colors */
+/* Dialog colors */
+/* Vertical ryhthm */
+/* Source: 
+	- http://www.smashingmagazine.com/2012/12/17/css-baseline-the-good-the-bad-and-the-ugly/
+	- http://24ways.org/2006/compose-to-a-vertical-rhythm/
+ */
+/* 62.5% = 1em = 10px */
+/*
+
+This section is dedicated to all the style that helps the developer in the development/debugging sessions.
+Do not bring to prod any code that resides in here.
+
+*/
 * {
   -webkit-transition: all .3s ease-in-out; }

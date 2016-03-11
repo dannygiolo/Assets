@@ -1,54 +1,50 @@
-/*  =======================================================
 
-		Table of content
+//   /$$$$$$                                               /$$              
+//  |_  $$_/                                              | $$              
+//    | $$   /$$$$$$/$$$$   /$$$$$$   /$$$$$$   /$$$$$$  /$$$$$$    /$$$$$$$
+//    | $$  | $$_  $$_  $$ /$$__  $$ /$$__  $$ /$$__  $$|_  $$_/   /$$_____/
+//    | $$  | $$ \ $$ \ $$| $$  \ $$| $$  \ $$| $$  \__/  | $$    |  $$$$$$ 
+//    | $$  | $$ | $$ | $$| $$  | $$| $$  | $$| $$        | $$ /$$ \____  $$
+//   /$$$$$$| $$ | $$ | $$| $$$$$$$/|  $$$$$$/| $$        |  $$$$/ /$$$$$$$/
+//  |______/|__/ |__/ |__/| $$____/  \______/ |__/         \___/  |_______/ 
+//                        | $$                                              
+//                        | $$                                              
+//                        |__/                                              
 
-			* Imports
-			
-			* @Font-face with style linking
-				- Brief
-				- Drawbacks
-
-	======================================================= */
-
-
-
-
-
-/*  =======================================================
-
-		Imports
-
-	=======================================================  */
-
-@import '../variables/variables-skin';
+@import '../variables/variables-layout';
+@import '../variables/variables-theme';
 
 
 
 
 
 
-/*  =======================================================
+//    /$$$$$$    /$$               /$$                 /$$ /$$           /$$       /$$                    
+//   /$$__  $$  | $$              | $$                | $$|__/          | $$      |__/                    
+//  | $$  \__/ /$$$$$$   /$$   /$$| $$  /$$$$$$       | $$ /$$ /$$$$$$$ | $$   /$$ /$$ /$$$$$$$   /$$$$$$ 
+//  |  $$$$$$ |_  $$_/  | $$  | $$| $$ /$$__  $$      | $$| $$| $$__  $$| $$  /$$/| $$| $$__  $$ /$$__  $$
+//   \____  $$  | $$    | $$  | $$| $$| $$$$$$$$      | $$| $$| $$  \ $$| $$$$$$/ | $$| $$  \ $$| $$  \ $$
+//   /$$  \ $$  | $$ /$$| $$  | $$| $$| $$_____/      | $$| $$| $$  | $$| $$_  $$ | $$| $$  | $$| $$  | $$
+//  |  $$$$$$/  |  $$$$/|  $$$$$$$| $$|  $$$$$$$      | $$| $$| $$  | $$| $$ \  $$| $$| $$  | $$|  $$$$$$$
+//   \______/    \___/   \____  $$|__/ \_______/      |__/|__/|__/  |__/|__/  \__/|__/|__/  |__/ \____  $$
+//                       /$$  | $$                                                               /$$  \ $$
+//                      |  $$$$$$/                                                              |  $$$$$$/
+//                       \______/                                                                \______/ 
 
-		@Font-face with style linking
+/*  
 
-	=======================================================  */
+	This technique consists in giving the the same font-family name multiple times, setting the weights and styles in each @font-face declaration to match the weight and style of the Web font file being accessed.	
 
-/*  Brief 
-		This technique consists in giving the the same font-family name multiple times,
-		setting the weights and styles in each @font-face declaration to match the weight
-		and style of the Web font file being accessed.
-*/
-
-/*	Drawbacks
+	Drawbacks
 		- crashes iPad1 and BlackBerry 9900
 		- compatible up to IE7
 		- if you use more than four weights and styles on the website, 
 			IE 7 and 8 will convert all light and medium weights to normal,
 			and all black and heavy weights to bold.
-*/
-
-/*  Sources 
-	  - http://coding.smashingmagazine.com/2013/02/14/setting-weights-and-styles-at-font-face-declaration/
+	
+	Sources 
+		- http://coding.smashingmagazine.com/2013/02/14/setting-weights-and-styles-at-font-face-declaration/
+		
 */
 
 @font-face {

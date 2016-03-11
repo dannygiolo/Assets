@@ -1,25 +1,22 @@
-/*  =======================================================
 
-		Table of content
+//   /$$$$$$                                               /$$              
+//  |_  $$_/                                              | $$              
+//    | $$   /$$$$$$/$$$$   /$$$$$$   /$$$$$$   /$$$$$$  /$$$$$$    /$$$$$$$
+//    | $$  | $$_  $$_  $$ /$$__  $$ /$$__  $$ /$$__  $$|_  $$_/   /$$_____/
+//    | $$  | $$ \ $$ \ $$| $$  \ $$| $$  \ $$| $$  \__/  | $$    |  $$$$$$ 
+//    | $$  | $$ | $$ | $$| $$  | $$| $$  | $$| $$        | $$ /$$ \____  $$
+//   /$$$$$$| $$ | $$ | $$| $$$$$$$/|  $$$$$$/| $$        |  $$$$/ /$$$$$$$/
+//  |______/|__/ |__/ |__/| $$____/  \______/ |__/         \___/  |_______/ 
+//                        | $$                                              
+//                        | $$                                              
+//                        |__/                                              
 
-			* Imports
+/*
 
-	======================================================= */
+*** _components.scss contains the classes and mixins that are not going to be use by themeselves, but as the name suggests as components for more complex objects.
 
+*/
 
-
-
-
-
-/*  =======================================================
-
-		Imports
-
-	=======================================================  */
-
-@import 'components/_helpers';
-@import 'components/_lists';
-@import 'components/_form-elements';
-@import 'components/_tables';
-@import 'components/_modals';
-@import 'components/_mixins';
+@import 'mixins/_mixins';
+@import 'ui/_ui';
+@import '_helpers';

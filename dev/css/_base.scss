@@ -1,44 +1,114 @@
-/*  =======================================================
 
-		Table of content
+//   /$$$$$$$                            /$$                              
+//  | $$__  $$                          | $$                              
+//  | $$  \ $$  /$$$$$$   /$$$$$$   /$$$$$$$       /$$$$$$/$$$$   /$$$$$$ 
+//  | $$$$$$$/ /$$__  $$ |____  $$ /$$__  $$      | $$_  $$_  $$ /$$__  $$
+//  | $$__  $$| $$$$$$$$  /$$$$$$$| $$  | $$      | $$ \ $$ \ $$| $$$$$$$$
+//  | $$  \ $$| $$_____/ /$$__  $$| $$  | $$      | $$ | $$ | $$| $$_____/
+//  | $$  | $$|  $$$$$$$|  $$$$$$$|  $$$$$$$      | $$ | $$ | $$|  $$$$$$$
+//  |__/  |__/ \_______/ \_______/ \_______/      |__/ |__/ |__/ \_______/
+//                                                                        
+//                                                                        
+//     
 
-			* Imports
+/*
 
-			* Dev
+_base.scss is the entry point for all the stylesheets. 
+It compiles all the scss partials into base.css and that's the only css file we bring to prod.
 
-	======================================================= */
+To follow a list of the other partials it imports in strict inclusion order.
+
+*** _variables-layout.scss contains all the layout related variables. No style allowed here, just everything box model related:
+	- media queries
+	- sizing
+	- offsets
+
+*** _variables-theme.scss in oppositions contains all the theme related variables. Here you can find:
+	- color palettes
+	- font declarations
+	- sprite details
+	- animations parameters
+
+*** _components.scss contains the classes and mixins that are not going to be use by themeselves, but as the name suggests as components for more complex objects:
+	- clear fixes
+	- media objects
+	- z-index map
+	- mixins
+	- animations
+
+*** _scaffolding.scss covers all the layout necessities:
+	- css reset
+	- site wide layout
+
+*** _typography.scss is the place to go for anything font related:
+	- font-face
+	- font attributes
+	- geolocalized quotes
+
+*** _includes.scss is a step forward in terms of object complexity library. Many of the objects in this section consists of extensions and customizations of _components.scss into more complex objects:
+	- main navigation
+	- custom video controls
+	- complex animations
+
+*** _sections.scss contains all the styles and customizations for specific sections.
+
+*** _theme.scss is the files that hosts the base for the main theme plus all of the different theme based on clients
+	- icons
+	- theme
+	- client overrides
+
+*/
 
 
 
 
 
 
-/*  =======================================================
-
-		Imports
-
-	=======================================================  */
+//   /$$$$$$                                               /$$              
+//  |_  $$_/                                              | $$              
+//    | $$   /$$$$$$/$$$$   /$$$$$$   /$$$$$$   /$$$$$$  /$$$$$$    /$$$$$$$
+//    | $$  | $$_  $$_  $$ /$$__  $$ /$$__  $$ /$$__  $$|_  $$_/   /$$_____/
+//    | $$  | $$ \ $$ \ $$| $$  \ $$| $$  \ $$| $$  \__/  | $$    |  $$$$$$ 
+//    | $$  | $$ | $$ | $$| $$  | $$| $$  | $$| $$        | $$ /$$ \____  $$
+//   /$$$$$$| $$ | $$ | $$| $$$$$$$/|  $$$$$$/| $$        |  $$$$/ /$$$$$$$/
+//  |______/|__/ |__/ |__/| $$____/  \______/ |__/         \___/  |_______/ 
+//                        | $$                                              
+//                        | $$                                              
+//                        |__/                                              
 
 @import 'diagnostic/_diagnostic';
 @import 'variables/_variables-layout';
-@import 'variables/_variables-skin';
+@import 'variables/_variables-theme';
 @import 'scaffolding/_scaffolding';
 @import 'typography/_typography';
 @import 'components/_components';
 @import 'includes/_includes';
 @import 'sections/_sections';
-@import 'skin/_skin';
+@import 'theme/_theme';
 
 
 
 
 
 
-/*  =======================================================
+//   /$$$$$$$                                         /$$               /$$          
+//  | $$__  $$                                       | $$              | $$          
+//  | $$  \ $$  /$$$$$$  /$$    /$$        /$$$$$$$ /$$$$$$   /$$   /$$| $$  /$$$$$$ 
+//  | $$  | $$ /$$__  $$|  $$  /$$/       /$$_____/|_  $$_/  | $$  | $$| $$ /$$__  $$
+//  | $$  | $$| $$$$$$$$ \  $$/$$/       |  $$$$$$   | $$    | $$  | $$| $$| $$$$$$$$
+//  | $$  | $$| $$_____/  \  $$$/         \____  $$  | $$ /$$| $$  | $$| $$| $$_____/
+//  | $$$$$$$/|  $$$$$$$   \  $/          /$$$$$$$/  |  $$$$/|  $$$$$$$| $$|  $$$$$$$
+//  |_______/  \_______/    \_/          |_______/    \___/   \____  $$|__/ \_______/
+//                                                            /$$  | $$              
+//                                                           |  $$$$$$/              
+//                                                            \______/               
 
-		Dev style
+/*
 
-	=======================================================  */
+This section is dedicated to all the style that helps the developer in the development/debugging sessions.
+Do not bring to prod any code that resides in here.
+
+*/
 
 * {
 	-webkit-transition: all .3s ease-in-out;

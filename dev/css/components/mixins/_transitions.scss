@@ -43,3 +43,60 @@ The arguments are to be passed with the same exact syntax as if you were writing
 		-ms-transform: $args;
 			transform: $args;
 }
+
+
+
+
+
+
+//   /$$$$$$$                                      /$$                       /$$                        
+//  | $$__  $$                                    | $$                      | $$                        
+//  | $$  \ $$  /$$$$$$  /$$   /$$        /$$$$$$$| $$$$$$$   /$$$$$$   /$$$$$$$  /$$$$$$  /$$  /$$  /$$
+//  | $$$$$$$  /$$__  $$|  $$ /$$/       /$$_____/| $$__  $$ |____  $$ /$$__  $$ /$$__  $$| $$ | $$ | $$
+//  | $$__  $$| $$  \ $$ \  $$$$/       |  $$$$$$ | $$  \ $$  /$$$$$$$| $$  | $$| $$  \ $$| $$ | $$ | $$
+//  | $$  \ $$| $$  | $$  >$$  $$        \____  $$| $$  | $$ /$$__  $$| $$  | $$| $$  | $$| $$ | $$ | $$
+//  | $$$$$$$/|  $$$$$$/ /$$/\  $$       /$$$$$$$/| $$  | $$|  $$$$$$$|  $$$$$$$|  $$$$$$/|  $$$$$/$$$$/
+//  |_______/  \______/ |__/  \__/      |_______/ |__/  |__/ \_______/ \_______/ \______/  \_____/\___/ 
+//                                                                                                      
+//                                                                                                      
+//                                                                                                      
+
+/*
+
+Source:
+- http://tobiasahlin.com/blog/how-to-animate-box-shadow/
+
+Transitioning a box-shadow on an element is very taxing as it cause a repaint on every frame.
+Here's a technique that simulate the transition on the shadow without causing repaint and improving performance.
+
+In this example we apply it to a scale transition.
+
+To achieve this we need to have two layer:
+- one for the element and its box-shadow;
+- one for the pseudo element with the already transformed box-shadow.
+
+We apply the wanted transition on the first element while we only apply opacity to the pseudo element.
+
+Setting up element transition.
+%element {
+	transition: all 0.3s ease-in-out;
+}
+
+Scale up the element.
+.element:hover {
+  transform: scale(1.2, 1.2);
+}
+
+Pre-render the scaled shadow, but hide it.
+%element::after {
+	box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+	opacity: 0;
+	transition: opacity 0.3s ease-in-out:
+}
+
+Transition to showing the scaled shadow on hover
+%element:hover::after {
+  opacity: 1;
+}
+
+*/

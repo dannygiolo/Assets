@@ -14,30 +14,106 @@
 @import 'variables/_variables-layout';
 @import 'variables/_variables-theme';
 
+/* HTML snippet can be found in the HTML5 catalogue section under 'tags/_tables.kit */
 
 
 
 
-/*  ========================================================
 
-		Tables
 
-	=======================================================  */
+//   /$$$$$$$                                                  /$$               /$$          
+//  | $$__  $$                                                | $$              | $$          
+//  | $$  \ $$  /$$$$$$   /$$$$$$$  /$$$$$$         /$$$$$$$ /$$$$$$   /$$   /$$| $$  /$$$$$$ 
+//  | $$$$$$$  |____  $$ /$$_____/ /$$__  $$       /$$_____/|_  $$_/  | $$  | $$| $$ /$$__  $$
+//  | $$__  $$  /$$$$$$$|  $$$$$$ | $$$$$$$$      |  $$$$$$   | $$    | $$  | $$| $$| $$$$$$$$
+//  | $$  \ $$ /$$__  $$ \____  $$| $$_____/       \____  $$  | $$ /$$| $$  | $$| $$| $$_____/
+//  | $$$$$$$/|  $$$$$$$ /$$$$$$$/|  $$$$$$$       /$$$$$$$/  |  $$$$/|  $$$$$$$| $$|  $$$$$$$
+//  |_______/  \_______/|_______/  \_______/      |_______/    \___/   \____  $$|__/ \_______/
+//                                                                     /$$  | $$              
+//                                                                    |  $$$$$$/              
+//                                                                     \______/               
 
+/*
+
+Setting table to full all available space.
+Removing all unnecessary space between cells.
+
+Note: rounded border are possible only with border-collapse: separate;
+
+*/
 table {
 	width: 100%;
-	border-spacing: 0;
 	border-collapse: collapse;
-	margin-top: 1em;
 }
 
-table:first-child {
-	margin-top: 0;
-}
-
+/* Setting a specific padding to cells to override Firefox custom padding. */
 td,
 th {
-	border-width: 1px; 
+	padding: .25rem;
+	border-width: 1px;
 	border-style: solid;
-	border-color: #111;
+	border-color: currentColor;
+}
+
+/*
+
+Truly responsive and meaningful tables are not easy to achieve.
+Here's a round up of solutions:
+- https://css-tricks.com/responsive-data-table-roundup/
+
+*/
+
+
+
+
+
+
+//    /$$$$$$                        /$$                             /$$                       /$$     /$$                    
+//   /$$__  $$                      | $$                            |__/                      | $$    |__/                    
+//  | $$  \__/ /$$   /$$  /$$$$$$$ /$$$$$$    /$$$$$$  /$$$$$$/$$$$  /$$ /$$$$$$$$  /$$$$$$  /$$$$$$   /$$  /$$$$$$  /$$$$$$$ 
+//  | $$      | $$  | $$ /$$_____/|_  $$_/   /$$__  $$| $$_  $$_  $$| $$|____ /$$/ |____  $$|_  $$_/  | $$ /$$__  $$| $$__  $$
+//  | $$      | $$  | $$|  $$$$$$   | $$    | $$  \ $$| $$ \ $$ \ $$| $$   /$$$$/   /$$$$$$$  | $$    | $$| $$  \ $$| $$  \ $$
+//  | $$    $$| $$  | $$ \____  $$  | $$ /$$| $$  | $$| $$ | $$ | $$| $$  /$$__/   /$$__  $$  | $$ /$$| $$| $$  | $$| $$  | $$
+//  |  $$$$$$/|  $$$$$$/ /$$$$$$$/  |  $$$$/|  $$$$$$/| $$ | $$ | $$| $$ /$$$$$$$$|  $$$$$$$  |  $$$$/| $$|  $$$$$$/| $$  | $$
+//   \______/  \______/ |_______/    \___/   \______/ |__/ |__/ |__/|__/|________/ \_______/   \___/  |__/ \______/ |__/  |__/
+//                                                                                                                            
+//                                                                                                                            
+//                                                                                                                            
+
+/* Zebra stripe */
+%table--zebra__striping {
+	tbody {
+		tr:nth-child(odd) {
+			background-color: #eee;
+		}
+	}
+}
+
+/* Highlight */
+%table--highlight {
+	/* Row */
+	tr:nth-child(2) {
+		background-color: yellow;
+	}
+
+	/* Col */
+	td:nth-child(2),
+	th:nth-child(2) {
+		background-color: yellow;
+	}
+}
+
+/* Hover effect */
+%table--hover {
+	/* Single cell */
+	td:hover,
+	th:hover {
+		background-color: yellow;
+	}
+
+	/* Row */
+	tbody tr:hover {
+		background-color: yellow;
+	}
+
 }

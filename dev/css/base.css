@@ -159,21 +159,51 @@ a[href=""] {
 	- http://24ways.org/2006/compose-to-a-vertical-rhythm/
  */
 /* 62.5% = 1em = 10px */
-/* New box model */
-/* Source: http://www.paulirish.com/2012/box-sizing-border-box-ftw/ */
-/* http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+/* 
+
+This file strips and adds styles where it makes sense to minimize the amount of declarations an overrides you will have to make later.
+While a foundation can be replicated elsewhere, it is simple and intended to be built on top of.
+
+Inspired by:
+- http://jaydenseric.com/blog/forget-normalize-or-resets-lay-your-own-css-foundation
+- https://necolas.github.io/normalize.css/3.0.3/normalize.css
+- http://meyerweb.com/eric/tools/css/reset/reset.css
+
+*/
 html {
-  box-sizing: border-box; }
+  /* 
+  New box model.
+  Sources: 
+  - http://www.paulirish.com/2012/box-sizing-border-box-ftw/
+  - http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ 
+  */
+  box-sizing: border-box;
+  /* 
+  Prevents certain mobile browsers from automatically zooming fonts. 
+  Importantly this ensures iOS Safari matches the page width to wider landscape viewports instead of zooming everything.
+  Unlike none, a value of 100% allows users to still pinch-zoom. 
+  */
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  /*
+  Fonts on OS X will look more consistent with other systems that do not render text using sub-pixel anti-aliasing. 
+  Although grayscale is inferior to sub-pixel anti-aliasing, most fonts were designed for the "thinner" anti-aliasing and look better that way.
+  Setting this smoothing beforehand prevents an ugly flickering of font "thickness" when animations start and stop. 
+  Browsers use this simpler font smoothing to save on resources when animating or transitioning elements.
+  */
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased; }
 
 * {
   -webkit-box-sizing: inherit;
   -moz-box-sizing: inherit;
   box-sizing: inherit; }
 
-/* Resetting */
-/* Feel free to add any other elements you may need */
-/* Source: http://meyerweb.com/eric/tools/css/reset/ */
-html,
+/*
+Stripping the margin and padding from these core elements brings them to the same predictable blank slate as div, section and article. 
+The vast majority of the time you style these elements you want either a 0 value or something very specific. 
+You will override 0 a lot less than an arbitrary value such as 1em.
+*/
 body,
 ul,
 li,
@@ -188,35 +218,150 @@ figure {
 li {
   list-style-type: none; }
 
-input,
-button,
-textarea,
-select {
-  border: none;
-  background: transparent;
-  font-size: 1em; }
+/* 
+<main> element is "unknown" in IE 9/10/11.
+*/
+main {
+  display: block; }
 
-button,
-select {
-  cursor: pointer; }
+/*
+Normalize vertical alignment of 'progress' in Chrome, Firefox, and Opera.
+*/
+audio,
+canvas,
+progress,
+video {
+  vertical-align: baseline; }
 
-/* Normalizing */
+/*
+A heading's level should be determined by it's placement in the document outline and not by the stylistic appearance of the words.
+Remove headings that are not utilized in this project.
+*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit; }
+
+/*
+This corrects some browsers defaulting to bolder.
+*/
+strong {
+  font-weight: bold; }
+
+/*
+Links are styled many different ways on the same page.
+It makes for less complex styles when links inherit the color intended for the region they are in.
+90% of your transitions apply to links and buttons, and most of them have a similar duration.
+*/
+a,
+button {
+  color: inherit;
+  transition: .3s; }
+
 a {
   text-decoration: none; }
 
+/*
+-webkit-appearance rule correct inability to style clickable input types in iOS.
+-webkit-font-smoothing rule fixes buggy inheritance. 
+For UX reasons and consistency with links it is a good idea to give all buttons a pointer cursor.
+Address overflow set to hidden in IE 8/9/10/11.
+*/
+button {
+  -webkit-appearance: button;
+  -webkit-font-smoothing: inherit;
+  cursor: pointer;
+  overflow: visible; }
+
+/*
+Reset default cursor for disabled elements.
+*/
+button[disabled] {
+  cursor: default; }
+
+/*
+Firefox adds a pseudo element inside buttons that causes them to display larger than expected.
+Source:
+- https://bugzilla.mozilla.org/show_bug.cgi?id=140562
+*/
+::-moz-focus-inner {
+  padding: 0;
+  border: 0; }
+
+/*
+Resets the native appearance in all browsers.
+*/
+button,
+input,
+optgroup,
+textarea,
+select {
+  background: none;
+  border: 0;
+  color: inherit;
+  font: inherit;
+  letter-spacing: inherit; }
+
+/*
+Remove default vertical scrollbar in IE 8/9/10/11.
+*/
+textarea {
+  overflow: auto; }
+
+/*
+It removes the user agent default outline that appears when focusing interactive elements.
+For accessibility only do this if you are absolutely sure you have custom focus state styles set everywhere.
+*/
 :focus,
 :active {
-  outline: none;
-  /* Make sure to style those somewhere else */ }
+  outline: none; }
 
+/*
+This makes sure images respect the bounds of a fluid container.
+The image never exceeds the width of it's container. The image's aspect ratio is preserved even if it has an inline height set.
+border: 0 fixes images within links gaining a border in IE 8, 9 and 10.
+*/
 img {
-  border: none;
-  max-width: 100%; }
+  max-width: 100%;
+  height: auto;
+  border: 0; }
 
-abbr,
-acronym {
+/*
+Styling not present in IE 8/9/10/11, Safari, and Chrome.
+*/
+abbr {
   border-bottom-width: 1px;
   border-bottom-style: dotted; }
+
+/*
+Prevent <sub> and <sup> affecting line-height in all browsers.
+*/
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sup {
+  top: -0.5em; }
+
+sub {
+  bottom: -0.25em; }
+
+/*
+Removes most spacing between table cells.
+*/
+table {
+  border-collapse: collapse; }
+
+td,
+th {
+  padding: 0;
+  text-align: left; }
 
 /* 480px */
 /* 960px */
@@ -323,7 +468,8 @@ It's usually used as an overlay to simulate some kind of progress bar.
     transform: translateX(-100%); } }
 /*
 
-The explosion animation gets and element and fade it out and shrinks it to zero dimension (invisible). Then it grows beyond its current dimension and fade out again.
+The explosion animation gets and element and fade it out and shrinks it to zero dimension (invisible). 
+Then it makes it grow beyond its current dimension and fade out again.
 
 */
 @keyframes animation--explosion {
@@ -356,6 +502,45 @@ This mixin accepts infinite arguments and prefix those into the appropriate decl
 The arguments are to be passed with the same exact syntax as if you were writing a transition yourself.
 
 */
+/*
+
+Source:
+- http://tobiasahlin.com/blog/how-to-animate-box-shadow/
+
+Transitioning a box-shadow on an element is very taxing as it cause a repaint on every frame.
+Here's a technique that simulate the transition on the shadow without causing repaint and improving performance.
+
+In this example we apply it to a scale transition.
+
+To achieve this we need to have two layer:
+- one for the element and its box-shadow;
+- one for the pseudo element with the already transformed box-shadow.
+
+We apply the wanted transition on the first element while we only apply opacity to the pseudo element.
+
+Setting up element transition.
+%element {
+	transition: all 0.3s ease-in-out;
+}
+
+Scale up the element.
+.element:hover {
+  transform: scale(1.2, 1.2);
+}
+
+Pre-render the scaled shadow, but hide it.
+%element::after {
+	box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+	opacity: 0;
+	transition: opacity 0.3s ease-in-out:
+}
+
+Transition to showing the scaled shadow on hover
+%element:hover::after {
+  opacity: 1;
+}
+
+*/
 /* 480px */
 /* 960px */
 /* 961px */
@@ -386,53 +571,7 @@ The arguments are to be passed with the same exact syntax as if you were writing
 	- http://24ways.org/2006/compose-to-a-vertical-rhythm/
  */
 /* 62.5% = 1em = 10px */
-/*  ========================================================
-
-		Reset
-
-	======================================================== */
-/* to be reviewd
-fieldset {
-	padding: 1em;
-}
-
-legend {
-	padding: 0 .5em;
-}
- 
-.form--row {
-	margin-top: 1em;
-}
-
-.form--row:first-child {
-	margin-top: 0;
-}
-
-[class^="form--id"],
-[class^="form--pw"] {
-	display: inline-block;
-	background: green;
-}
-
-.form--id-label,
-.form--pw-label {
-	min-width: 5em;
-}
-
-.form--id-input,
-.form--pw-input {
-	min-width: 20em;
-}
-
-.form--textarea-label {
-	vertical-align: top;
-}
-
-.form--button-disabled {
-	opacity: 0.5;
-	cursor: default;
-}
-*/
+/* HTML snippet can be found in the HTML5 catalogue section under 'tags/_form-elements.kit */
 /* 480px */
 /* 960px */
 /* 961px */
@@ -446,26 +585,37 @@ legend {
 	- http://24ways.org/2006/compose-to-a-vertical-rhythm/
  */
 /* 62.5% = 1em = 10px */
-/*  ========================================================
+/* HTML snippet can be found in the HTML5 catalogue section under 'tags/_tables.kit */
+/*
 
-		Tables
+Setting table to full all available space.
+Removing all unnecessary space between cells.
 
-	=======================================================  */
+Note: rounded border are possible only with border-collapse: separate;
+
+*/
 table {
   width: 100%;
-  border-spacing: 0;
-  border-collapse: collapse;
-  margin-top: 1em; }
+  border-collapse: collapse; }
 
-table:first-child {
-  margin-top: 0; }
-
+/* Setting a specific padding to cells to override Firefox custom padding. */
 td,
 th {
+  padding: .25rem;
   border-width: 1px;
   border-style: solid;
-  border-color: #111; }
+  border-color: currentColor; }
 
+/*
+
+Truly responsive and meaningful tables are not easy to achieve.
+Here's a round up of solutions:
+- https://css-tricks.com/responsive-data-table-roundup/
+
+*/
+/* Zebra stripe */
+/* Highlight */
+/* Hover effect */
 /* 480px */
 /* 960px */
 /* 961px */
@@ -698,7 +848,8 @@ It's usually used as an overlay to simulate some kind of progress bar.
     transform: translateX(-100%); } }
 /*
 
-The explosion animation gets and element and fade it out and shrinks it to zero dimension (invisible). Then it grows beyond its current dimension and fade out again.
+The explosion animation gets and element and fade it out and shrinks it to zero dimension (invisible). 
+Then it makes it grow beyond its current dimension and fade out again.
 
 */
 @keyframes animation--explosion {
@@ -731,6 +882,45 @@ This mixin accepts infinite arguments and prefix those into the appropriate decl
 The arguments are to be passed with the same exact syntax as if you were writing a transition yourself.
 
 */
+/*
+
+Source:
+- http://tobiasahlin.com/blog/how-to-animate-box-shadow/
+
+Transitioning a box-shadow on an element is very taxing as it cause a repaint on every frame.
+Here's a technique that simulate the transition on the shadow without causing repaint and improving performance.
+
+In this example we apply it to a scale transition.
+
+To achieve this we need to have two layer:
+- one for the element and its box-shadow;
+- one for the pseudo element with the already transformed box-shadow.
+
+We apply the wanted transition on the first element while we only apply opacity to the pseudo element.
+
+Setting up element transition.
+%element {
+	transition: all 0.3s ease-in-out;
+}
+
+Scale up the element.
+.element:hover {
+  transform: scale(1.2, 1.2);
+}
+
+Pre-render the scaled shadow, but hide it.
+%element::after {
+	box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+	opacity: 0;
+	transition: opacity 0.3s ease-in-out:
+}
+
+Transition to showing the scaled shadow on hover
+%element:hover::after {
+  opacity: 1;
+}
+
+*/
 /* 480px */
 /* 960px */
 /* 961px */
@@ -761,53 +951,7 @@ The arguments are to be passed with the same exact syntax as if you were writing
 	- http://24ways.org/2006/compose-to-a-vertical-rhythm/
  */
 /* 62.5% = 1em = 10px */
-/*  ========================================================
-
-		Reset
-
-	======================================================== */
-/* to be reviewd
-fieldset {
-	padding: 1em;
-}
-
-legend {
-	padding: 0 .5em;
-}
- 
-.form--row {
-	margin-top: 1em;
-}
-
-.form--row:first-child {
-	margin-top: 0;
-}
-
-[class^="form--id"],
-[class^="form--pw"] {
-	display: inline-block;
-	background: green;
-}
-
-.form--id-label,
-.form--pw-label {
-	min-width: 5em;
-}
-
-.form--id-input,
-.form--pw-input {
-	min-width: 20em;
-}
-
-.form--textarea-label {
-	vertical-align: top;
-}
-
-.form--button-disabled {
-	opacity: 0.5;
-	cursor: default;
-}
-*/
+/* HTML snippet can be found in the HTML5 catalogue section under 'tags/_form-elements.kit */
 /* 480px */
 /* 960px */
 /* 961px */
@@ -821,26 +965,37 @@ legend {
 	- http://24ways.org/2006/compose-to-a-vertical-rhythm/
  */
 /* 62.5% = 1em = 10px */
-/*  ========================================================
+/* HTML snippet can be found in the HTML5 catalogue section under 'tags/_tables.kit */
+/*
 
-		Tables
+Setting table to full all available space.
+Removing all unnecessary space between cells.
 
-	=======================================================  */
+Note: rounded border are possible only with border-collapse: separate;
+
+*/
 table {
   width: 100%;
-  border-spacing: 0;
-  border-collapse: collapse;
-  margin-top: 1em; }
+  border-collapse: collapse; }
 
-table:first-child {
-  margin-top: 0; }
-
+/* Setting a specific padding to cells to override Firefox custom padding. */
 td,
 th {
+  padding: .25rem;
   border-width: 1px;
   border-style: solid;
-  border-color: #111; }
+  border-color: currentColor; }
 
+/*
+
+Truly responsive and meaningful tables are not easy to achieve.
+Here's a round up of solutions:
+- https://css-tricks.com/responsive-data-table-roundup/
+
+*/
+/* Zebra stripe */
+/* Highlight */
+/* Hover effect */
 /* 480px */
 /* 960px */
 /* 961px */
@@ -1142,7 +1297,8 @@ It's usually used as an overlay to simulate some kind of progress bar.
     transform: translateX(-100%); } }
 /*
 
-The explosion animation gets and element and fade it out and shrinks it to zero dimension (invisible). Then it grows beyond its current dimension and fade out again.
+The explosion animation gets and element and fade it out and shrinks it to zero dimension (invisible). 
+Then it makes it grow beyond its current dimension and fade out again.
 
 */
 @keyframes animation--explosion {
@@ -1175,6 +1331,45 @@ This mixin accepts infinite arguments and prefix those into the appropriate decl
 The arguments are to be passed with the same exact syntax as if you were writing a transition yourself.
 
 */
+/*
+
+Source:
+- http://tobiasahlin.com/blog/how-to-animate-box-shadow/
+
+Transitioning a box-shadow on an element is very taxing as it cause a repaint on every frame.
+Here's a technique that simulate the transition on the shadow without causing repaint and improving performance.
+
+In this example we apply it to a scale transition.
+
+To achieve this we need to have two layer:
+- one for the element and its box-shadow;
+- one for the pseudo element with the already transformed box-shadow.
+
+We apply the wanted transition on the first element while we only apply opacity to the pseudo element.
+
+Setting up element transition.
+%element {
+	transition: all 0.3s ease-in-out;
+}
+
+Scale up the element.
+.element:hover {
+  transform: scale(1.2, 1.2);
+}
+
+Pre-render the scaled shadow, but hide it.
+%element::after {
+	box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+	opacity: 0;
+	transition: opacity 0.3s ease-in-out:
+}
+
+Transition to showing the scaled shadow on hover
+%element:hover::after {
+  opacity: 1;
+}
+
+*/
 /* 480px */
 /* 960px */
 /* 961px */
@@ -1205,53 +1400,7 @@ The arguments are to be passed with the same exact syntax as if you were writing
 	- http://24ways.org/2006/compose-to-a-vertical-rhythm/
  */
 /* 62.5% = 1em = 10px */
-/*  ========================================================
-
-		Reset
-
-	======================================================== */
-/* to be reviewd
-fieldset {
-	padding: 1em;
-}
-
-legend {
-	padding: 0 .5em;
-}
- 
-.form--row {
-	margin-top: 1em;
-}
-
-.form--row:first-child {
-	margin-top: 0;
-}
-
-[class^="form--id"],
-[class^="form--pw"] {
-	display: inline-block;
-	background: green;
-}
-
-.form--id-label,
-.form--pw-label {
-	min-width: 5em;
-}
-
-.form--id-input,
-.form--pw-input {
-	min-width: 20em;
-}
-
-.form--textarea-label {
-	vertical-align: top;
-}
-
-.form--button-disabled {
-	opacity: 0.5;
-	cursor: default;
-}
-*/
+/* HTML snippet can be found in the HTML5 catalogue section under 'tags/_form-elements.kit */
 /* 480px */
 /* 960px */
 /* 961px */
@@ -1265,26 +1414,37 @@ legend {
 	- http://24ways.org/2006/compose-to-a-vertical-rhythm/
  */
 /* 62.5% = 1em = 10px */
-/*  ========================================================
+/* HTML snippet can be found in the HTML5 catalogue section under 'tags/_tables.kit */
+/*
 
-		Tables
+Setting table to full all available space.
+Removing all unnecessary space between cells.
 
-	=======================================================  */
+Note: rounded border are possible only with border-collapse: separate;
+
+*/
 table {
   width: 100%;
-  border-spacing: 0;
-  border-collapse: collapse;
-  margin-top: 1em; }
+  border-collapse: collapse; }
 
-table:first-child {
-  margin-top: 0; }
-
+/* Setting a specific padding to cells to override Firefox custom padding. */
 td,
 th {
+  padding: .25rem;
   border-width: 1px;
   border-style: solid;
-  border-color: #111; }
+  border-color: currentColor; }
 
+/*
+
+Truly responsive and meaningful tables are not easy to achieve.
+Here's a round up of solutions:
+- https://css-tricks.com/responsive-data-table-roundup/
+
+*/
+/* Zebra stripe */
+/* Highlight */
+/* Hover effect */
 /* 480px */
 /* 960px */
 /* 961px */

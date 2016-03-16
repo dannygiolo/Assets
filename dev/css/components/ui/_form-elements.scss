@@ -14,54 +14,21 @@
 @import 'variables/_variables-layout';
 @import 'variables/_variables-theme';
 
+/* HTML snippet can be found in the HTML5 catalogue section under 'tags/_form-elements.kit */
 
 
 
 
-/*  ========================================================
 
-		Reset
 
-	======================================================== */
-/* to be reviewd
-fieldset {
-	padding: 1em;
-}
-
-legend {
-	padding: 0 .5em;
-}
- 
-.form--row {
-	margin-top: 1em;
-}
-
-.form--row:first-child {
-	margin-top: 0;
-}
-
-[class^="form--id"],
-[class^="form--pw"] {
-	display: inline-block;
-	background: green;
-}
-
-.form--id-label,
-.form--pw-label {
-	min-width: 5em;
-}
-
-.form--id-input,
-.form--pw-input {
-	min-width: 20em;
-}
-
-.form--textarea-label {
-	vertical-align: top;
-}
-
-.form--button-disabled {
-	opacity: 0.5;
-	cursor: default;
-}
-*/
+//   /$$$$$$$                                                  /$$               /$$          
+//  | $$__  $$                                                | $$              | $$          
+//  | $$  \ $$  /$$$$$$   /$$$$$$$  /$$$$$$         /$$$$$$$ /$$$$$$   /$$   /$$| $$  /$$$$$$ 
+//  | $$$$$$$  |____  $$ /$$_____/ /$$__  $$       /$$_____/|_  $$_/  | $$  | $$| $$ /$$__  $$
+//  | $$__  $$  /$$$$$$$|  $$$$$$ | $$$$$$$$      |  $$$$$$   | $$    | $$  | $$| $$| $$$$$$$$
+//  | $$  \ $$ /$$__  $$ \____  $$| $$_____/       \____  $$  | $$ /$$| $$  | $$| $$| $$_____/
+//  | $$$$$$$/|  $$$$$$$ /$$$$$$$/|  $$$$$$$       /$$$$$$$/  |  $$$$/|  $$$$$$$| $$|  $$$$$$$
+//  |_______/  \_______/|_______/  \_______/      |_______/    \___/   \____  $$|__/ \_______/
+//                                                                     /$$  | $$              
+//                                                                    |  $$$$$$/              
+//                                                                     \______/               
